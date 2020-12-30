@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="None">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <title>Introduction &mdash; Guidelines for FGP Plugins</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="stylesheets/extra.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="." class="site-name"> Guidelines for FGP Plugins</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="./search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1 current"><a class="nav-item current" href=".">Introduction</a>
+<ul class="subnav"><ul>
+    
+        <li class="toctree-l2"><a class="nav-item toc"  href="#welcome-to-guidelines-for-fgp-plugins">Welcome to Guidelines for FGP Plugins</a></li>
+        
+    
+    </ul>
+
+    
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Guidelines</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="guides/fgpauthor/">FGP Author Tool</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="guides/timeseries/">Visualize Temporal Data</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="guides/comparison/">Enable Layer Comparison</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Plugins</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="plugin/rangetimeslider/">Range/Time Slider</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="plugin/thematicslider/">Thematic Slider</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="plugin/swiper/">Swiper</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="plugin/draw/">Draw ToolBar</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="plugin/aoi/">Area of Interest</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="plugin/coord/">Coordinates Info</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">About</button>
+<ul class="subnav">
+    <li class="toctree-l2">
+<a class="nav-item" href="about/">Support</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="next"><a href="guides/fgpauthor/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="." class="site-name"> Guidelines for FGP Plugins</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    
+</ul>
+</nav>
+                <div id="content"><h1 id="welcome-to-guidelines-for-fgp-plugins">Welcome to Guidelines for FGP Plugins</h1>
+<p>Welcome to the Guidelines for the plugins developed for the FGP platform. The objective of these guidelines is to encourage the proper use of these plugins on FGP to enhance research, visualization, analysis, and application development.</p>
+<p>These plugins are created to offer new and interesting ways to present your rich datasets to the users. The following guidelines will focus on the proper initialization of the configuration parameters for the successful integration of the plugins. Definition of parameters, expected data structures as well as a configuration guide will be provided in addition to interactive use cases using existing datasets found on FGP.</p>
+<p><br></p>
+<p><strong>Getting Started</strong></p>
+<p>There are many ways in which the plugins can be used effectively with your data. Here are a few guides which will allow you to quickly get started:</p>
+<p><a href="guides/timeseries/">Visualize Temporal Data</a> - Take your data to the next level by allowing users to visualize your data using time series animations. This allows users to view the data using the range/ time slider or the thematic slider to convey concepts such as cumulative effects (CE) in an easy, intuitive, and interactive way.</p>
+<p><a href="guides/complexdata/">Visualize Complex Datasets</a> – Using the power of charts (Pie, Bar, Line) to visualize complex data that can be overwhelming to breakdown from a glance. Allows users to quickly perform analysis and generate interest by presenting the data in visually appealing/customizable charts</p>
+<p><a href="guides/comparison/">Enable Layer Comparison</a> – Using the Swiper plugin, a quick comparison of two or more layers can be accomplished.</p>
+<p><br></p>
+<p><strong>About the Plugins</strong></p>
+<p>There are 5 main plugins that focus on visual enhancements for your data.</p>
+<ol>
+<li><a href="plugin/rangetimeslider/">Range/Time Slider Plugin</a></li>
+<li><a href="plugin/thematicslider/">Thematic Slider Plugin</a></li>
+<li><a href="plugin/swiper/">Swiper Plugin</a></li>
+<li><a href="">Chart Plugin</a></li>
+<li><a href="plugin/draw/">Draw Toolbar Plugin</a></li>
+</ol>
+<p><strong>Core Plugins</strong></p>
+<ol>
+<li><a href="plugin/aoi/">Area Of Interest</a></li>
+<li><a href="plugin/coord/">Coordinate Info</a></li>
+</ol></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="next"><a href="guides/fgpauthor/" title="FGP Author Tool"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js"></script>
+    <script src="javascripts/extra.js"></script>
+    <script src="search/main.js"></script>
+</body>
+
+</html>

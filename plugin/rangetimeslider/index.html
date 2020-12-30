@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Range/Time Slider &mdash; Guidelines for FGP Plugins</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../../stylesheets/extra.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> Guidelines for FGP Plugins</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">Introduction</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Guidelines</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/fgpauthor/">FGP Author Tool</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/timeseries/">Visualize Temporal Data</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/comparison/">Enable Layer Comparison</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Plugins</button>
+<ul class="subnav">
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Range/Time Slider</a>
+<ul class="subnav"><ul>
+    
+        <li class="toctree-l3"><a class="nav-item toc"  href="#what-is-the-rangetime-slider">What is the Range/Time Slider</a></li>
+        
+            <li class="toctree-l4"><a class="nav-item toc"  href="#advantages-of-the-rangetime-slider">Advantages of the Range/Time Slider</a></li>
+            
+        
+            <li class="toctree-l4"><a class="nav-item toc"  href="#best-practices">Best Practices</a></li>
+            
+        
+            <li class="toctree-l4"><a class="nav-item toc"  href="#use-case-examples">Use Case Examples</a></li>
+            
+        
+            <li class="toctree-l4"><a class="nav-item toc"  href="#configure-the-rangetime-slider-plugin">Configure the Range/Time Slider Plugin</a></li>
+            
+        
+            <li class="toctree-l4"><a class="nav-item toc"  href="#getting-started">Getting Started</a></li>
+            
+            <li class="toctree-l5"><a class="nav-item toc"  href="#data-preparation">Data Preparation</a></li>
+            
+            <li class="toctree-l5"><a class="nav-item toc"  href="#configure-the-range-slider">Configure the Range Slider</a></li>
+            
+            <li class="toctree-l5"><a class="nav-item toc"  href="#definition-of-parameters">Definition of Parameters</a></li>
+            
+        
+    
+    </ul>
+
+    
+</ul></li>
+    <li class="toctree-l2"><a class="nav-item" href="../thematicslider/">Thematic Slider</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../swiper/">Swiper</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../draw/">Draw ToolBar</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../aoi/">Area of Interest</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../coord/">Coordinates Info</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">About</button>
+<ul class="subnav">
+    <li class="toctree-l2">
+<a class="nav-item" href="../../about/">Support</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="previous"><a href="../../guides/comparison/">&laquo; Previous</a></div>
+    <div class="next"><a href="../thematicslider/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> Guidelines for FGP Plugins</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Plugins</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="what-is-the-rangetime-slider">What is the Range/Time Slider</h1>
+<p>The Range/Time Slider offers a dynamic way to visualize your data. The basic slider is a horizontal bar and has anchors that can be moved to establish the range of the values to be used. To visualize your data as a dynamic range, you can use any layer that contains numeric or date fields.
+Once you define the range properties for your layer, an interactive, on-screen slider is used to explore the data through a range/time you customized. Using this plugin, you can control the animation of the data with buttons to play and pause, go to the previous range/time, and go to the next range/time.</p>
+<p><img alt="timeseries bar" src="../../assets/imgs/rangeslider/rangesliderbar.png" /></p>
+<blockquote>
+<p>The Range/Time Slider plugin simplifies the visualization of temporal data in your maps. Before adding the Time Slider to your application, you first should understand how it can be configured to correctly display your temporal data. The plugin properties can be set using any numerical or date field stored in the attribute field. For example, a range of values for a particular parameter.</p>
+</blockquote>
+<p><br></p>
+<h2 id="advantages-of-the-rangetime-slider">Advantages of the Range/Time Slider</h2>
+<p><strong>What are the advantages of using the Range/Time Slider plugin?</strong></p>
+<p>The Range/Time Slider plugin offers many advantages to both the data contributor and the user.</p>
+<ol>
+<li>
+<p>The main advantage to the data contributor when using the Range/Time Slider plugin is the ability to provide Time Series Animation or Range filtering of the data using only one layer.</p>
+</li>
+<li>
+<p>The advantages the Range/Time Slider provides to the user can be summarized in the following points:</p>
+</li>
+<li>
+<p>The ability to animation a GIF.</p>
+</li>
+<li>Granular control over the time increment</li>
+<li>Lock or unlock the anchors when step or play.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Click on the top right corner to activate compact mode</p>
+<p><img alt="rangeslider compact mode" src="../../assets/gifs/rangeslider/rangeslidergif2.gif" /></p>
+</div>
+<hr />
+<p><br></p>
+<h2 id="best-practices">Best Practices</h2>
+<p><strong>Get the best out of the Range/Time Slider</strong></p>
+<p>The Range/Time Slider is best used in cases where you have a mapservice/layer with a numeric / date field. In this regard, you can filter the data using the slider and the results are displayed dynamically on the map.
+Take, for example, this map layer <a href="https://gcgeo.gc.ca/geonetwork/metadata/eng/8cf43e2b-f276-4fb7-8d3a-e20fecc618b4" target="_blank">General distribution of humpback whales in the Estuary and Gulf of St. Lawrence</a> dataset.
+If we look at the map service for this dataset, we can see that there are a few fields that can work with the Range/Time Slider Plugin. In this example, the “Year” field was used.</p>
+<blockquote>
+<p>Utilizing the Range/Time Slider together with this rich data, we can dynamically filter the data to narrow results immediately.</p>
+<p>You can interactively adjust the minimum and maximum values of the displayed range, or move the entire range up and down. The slider and range settings are fully configurable using the Range tab, allowing you to look through the full range extent of your data using logical increments.</p>
+<p>By pressing the play button, the map will begin a time-series animation based on the range set. This may be 1-year or 5-year increments. This is a useful ability to determine trends or patterns occurring within the dataset.</p>
+</blockquote>
+<iframe id="iframe1" allowfullscreen=true importance = high data-src="https://jolevesq.github.io/contributed-plugins/range-slider/samples/range-slider-index.html?sample=14"></iframe>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Click on the full screen button to enter an expansive view.</p>
+</div>
+<hr />
+<p><br></p>
+<h2 id="use-case-examples">Use Case Examples</h2>
+<p><strong>Range Slider</strong></p>
+<p>In this example, the Range/Time Slider plugin was used with the Hydroelectric <a href="https://geoappext.nrcan.gc.ca/arcgis/rest/services/NACEI/energy_infrastructure_of_north_america_en/MapServer/20" target="_blank">layer</a>. This layer is an example of an ESRI Feature layer being used with the range slider. The Total_MW field was used with the range slider plugin to give the ability to the viewer to select specific amount of power generation they may be interested in.</p>
+<p>It is important to note the data structure of this layer. Looking closer at this dataset we can see that the Total_MW field consists of only integers. This enables the range slider to automatically identify the limits of the ranges present.</p>
+<iframe id="iframe2" allowfullscreen=true importance = high data-src="https://jolevesq.github.io/contributed-plugins/range-slider/samples/range-slider-index.html?sample=1"></iframe>
+
+<p><strong>Time Series</strong></p>
+<p>In this example, the Range/Time Slider was used with the <a href="https://gcgeo.gc.ca/geonetwork/metadata/eng/7da1f04f-49b0-4208-a49e-d0597b1f55c6" target="_blank">Ocean Data Inventory Temperature</a> and <a href="https://gcgeo.gc.ca/geonetwork/metadata/eng/7da1f04f-49b0-4208-a49e-d0597b1f55c6" target="_blank">Ocean Data Inventory Salinity</a> datasets. The plugin was used with the “COLLECTION_START_DATE” it is interesting to note that both layers share the same field in this example. This made it easier to use the Range/Time Slider plugin with both layers simultaneously.</p>
+<iframe id="iframe3" allowfullscreen=true importance = high data-src="https://jolevesq.github.io/contributed-plugins/range-slider/samples/range-slider-index.html?sample=15"></iframe>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use the anchors on the left and right to set the range of values to be displayed.</p>
+</div>
+<hr />
+<p><br></p>
+<h2 id="configure-the-rangetime-slider-plugin">Configure the Range/Time Slider Plugin</h2>
+<p>The plugin works with the following mapping services:</p>
+<ul>
+<li>ESRI Feature</li>
+<li>ESRI Dynamic</li>
+<li>ESRI WMS</li>
+<li>ESRI Image</li>
+<li>OGC WMS</li>
+<li>OGC WMS-T</li>
+<li>OGC WCS</li>
+</ul>
+<p>More information on Web map services can be found <a href="https://www.nrcan.gc.ca/earth-sciences/geomatics/canadas-spatial-data-infrastructure/8902" target="_blank">here.</a></p>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="data-preparation">Data Preparation</h3>
+<p>To get started we need to ensure that your data is prepared in a format that will work well with the Range Slider plugin.</p>
+<blockquote>
+<p>(i) For time-series animation, the range slider works best with a layer that has a time attribute in the attribute table. For example, this can be simply a year (1980) or a date and time (1/1/1980 12:00:00).</p>
+<p>(ii) For other use cases, once there is a numeric field present in the attribute table it will work with the Range Slider</p>
+</blockquote>
+<h3 id="configure-the-range-slider">Configure the Range Slider</h3>
+<p><strong>Step 1.</strong> Ensure that the Range/Time Slider Plugin is enabled.</p>
+<figure>
+<video style="width:100%"  controls>
+  <source src="../../assets/videos/rangeslider/slider1.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</figure>
+
+<p>There you will find the options to:</p>
+<p>(i) Start the animation on load – This will run the animation as soon as the map loads</p>
+<p>(ii) Play the animation in a loop – This will by default continue to loop through the animation.</p>
+<p>Under Slider bar controls, choose whether you want the slider to do the following:</p>
+<ul>
+<li>Lock/unlock minimal range</li>
+<li>Loop playback.</li>
+<li>Export animation as GIF</li>
+<li>Delay between animation</li>
+<li>Refresh</li>
+</ul>
+<p><strong>Step 2.</strong> Define parameters</p>
+<p><strong>(a)</strong> Choose the Slider Type</p>
+<p>Under the Slider Type, select one of the options, Number, Date or WMS-T. This corresponds to the map service type that will be used with the plugin</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When using Esri Image service, you will use the Date type, When using OGC WMS, WMS-T type is selected.
+When using if Date or WMS-T is selected, the range and limit must be in milliseconds.</p>
+</div>
+<p><strong>(b)</strong> Chosse the Range Type - Under the Range Type, select one of the options available.</p>
+<p>The Range/Time slider offers two options. Single and Dual, This relates to how the slider will be represented. Dual means that you have a left and right anchor present. This allows to set a range using both anchors at the same time. On the other hand, single only displays one anchor which is used to set single ranges.</p>
+<p><strong>(c)</strong> Choose the Step Type - Choose one of the ooptions available.</p>
+<p>The step type determines whether you want to use Dynamic where the ranges are dynamically determined between the maximum and minimum limits or static where you manually input the desired ranges you want the user to be able to use.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Single range type and Dynamic step type is not allowed</p>
+</div>
+<p><strong>(d)</strong> Units - Define your units you are working in.</p>
+<p>This is where the unit of measure is defined to be displayed on the right side of the slider. Please note that is recommended that this be kept short or remain to a symbol. E.g., If your data shows the change in temperature is Celsius degrees; the degree symbol should be considered to be used.</p>
+<p><img alt="Guide1" class="guide" src="../../assets/imgs/rangeslider/Guide2.png" /></p>
+<p><strong>(e)</strong> Description</p>
+<p>You have the option to add any extra description you want to communicate to the user. This will be displayed at the bottom of the toolbar.</p>
+<p><strong>(f)</strong> Precision</p>
+<p>Set the desired precision to be used by the Range Slider. You have the option to either set the number of decimal places when dealing with numerical data or use Date or Hour formats when displaying time specific data.</p>
+<p><strong>(g)</strong> Set the animation delay. The default is 3sec</p>
+<figure>
+<video style="width:100%"  controls>
+  <source src="../../assets/videos/rangeslider/slider2.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</figure>
+
+<p><strong>Step 3.</strong> Range and Limits</p>
+<p>Define your range and limits for your data. If you set your Slider Type to (i) Date or (ii)WMS-T, you must define limits using milliseconds as mentioned in Step 1. This step is not necessary if your Slider Type is set to number
+A conversion tool is built into the Authoring tool to allow for easy conversion between date and times.</p>
+<p><img alt="Guide1" class="guide" src="../../assets/imgs/rangeslider/Guide3.png" /></p>
+<p><strong>Extra Step.</strong> Step Type as “Static”</p>
+<p>Some layer types require extra inputs to be completed before it will load.
+If you are using the Step Type as “Static” there will be an extra option available to set the individual steps for the data. You are able to add as many individual values as required.</p>
+<p><img alt="Guide1" class="guide" src="../../assets/imgs/rangeslider/Guide4.png" /></p>
+<figure>
+<video style="width:100%"  controls>
+  <source src="../../assets/videos/rangeslider/slider3.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</figure>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You do not need to set the minimum and maximum values as part of the static limit values. This will be automatically loaded from the default limit values that your defined earlier.</p>
+</div>
+<p><strong>Step 4.</strong></p>
+<p>Under layers, select the layer which the plugin will be enabled on.
+The layer Id is automatically generated when adding a map service to the Authoring tool. Each layer will have a unique Id generated. Ensure that you are selecting the correct layer to be used.</p>
+<p><img alt="Guide1" class="guide" src="../../assets/imgs/rangeslider/Guide5.png" /></p>
+<p>Populate the field name that the Range Slider will use to reference the data.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The exact field name must be used, not the alias.</p>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<h3 id="definition-of-parameters">Definition of Parameters</h3>
+<p>To configure this plugin to work with a mapping web service the following parameters are required.</p>
+<table>
+  <tr>
+    <th></th>
+    <th>Parameters</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <th rowspan="3">General</th>
+    <td id=parameters>Open</td>
+    <td >Determines if the plugin will open/load automatically when a layer loads. By default it is set to open on map load</td>
+  </tr>
+    <tr>
+    <td id=parameters>Autorun</td>
+    <td>Allows the animation to start automatically when the map loads.</td>
+  </tr>
+    <tr>
+    <td id=parameters>Loop</td>
+    <td>Allows the animation to restart automatically when it reaches the end of the array</td>
+  </tr>
+  <tr>
+    <th rowspan="5">Slide Bar Controls</th>
+    <td id=parameters>Lock</td>
+    <td>Lock or unlock left anchor when step or play</td>
+  </tr>
+  <tr>
+    <td id=parameters>Loop</td>
+    <td>Loop the animation</td>
+  </tr>
+    <tr>
+    <td id=parameters>Delay</td>
+    <td>Add a dropdown menu to change the delay in play animation</td>
+  </tr>
+    <tr>
+    <td id=parameters>Export</td>
+    <td>Ability to export the animation to a GIF</td>
+  </tr>
+    <tr>
+    <td id=parameters>Refresh</td>
+    <td>Reset the slider with the default values</td>
+  </tr>
+  <tr>
+    <th rowspan="9">Params</th>
+    <td id=parameters> Type</td>
+    <td>Determines the type of slider (date, wmst or number) to be used. If date or wmst is selected, range and limit must be in milliseconds.</td>
+  </tr>
+  <tr>
+    <td id=parameters>Range Type</td>
+    <td>Determines the type of range to be used. Single for one handle or Dual for two handles</td>
+  </tr>
+    <tr>
+    <td id=parameters>Step Type</td>
+    <td>The type of step (dynamic for open values or static from a list of values)</td>
+  </tr>
+      <tr>
+    <td id=parameters>Units</td>
+    <td>Allows you to display a unit of measure to the range slider. Shown at the right of the axis</td>
+  </tr>
+      <tr>
+    <td id=parameters>Description</td>
+    <td>Allows you add a short description to the slider. Shown at the bottom of the toolbar</td>
+  </tr>
+      <tr>
+    <td id=parameters>Precision</td>
+    <td>Allows you to set the precision of the data.
+        <ol type="i">
+          <li id=tablelist>Number - Set the precision for either 0,1,2 decimal places</li>
+          <li id=tablelist>Date or Wmst - Set the precision for either Date or Hour </li>
+        </ol>
+    </td>
+  </tr>
+    <tr>
+    <td id=parameters>Animation Delay</td>
+    <td>Sets the delay between animations in milliseconds</td>
+  </tr>
+    <tr>
+    <td id=parameters>Range</td>
+    <td>Determines the minimum and maximum range values to be used in the plugin
+        <ol type="i">
+          <li id=tablelist>Minimum - Set the minimum value for the range slider. If this is not set the minimum range will be determined from the field selected.</li>
+          <li id=tablelist>Maximum – Set the maximum value for the range slider. If this is not set the maximum range will be used</li>
+        </ol>
+    </td>
+  </tr>
+    <tr>
+    <td id=parameters>Limit</td>
+    <td>Determines the minimum and maximum limit values to be used in the plugin
+         <ol type="i">
+          <li id=tablelist>Minimum - Set the minimum value for the range slider. If this is not set the minimum range will be determined from the field selected.</li>
+          <li id=tablelist>Maximum – Set the maximum value for the range slider. If this is not set the maximum range will be used</li>
+           <li id=tablelist>Static Items – Allows you to set an array of values to use for inner limits. This is only enabled when Step Type is set to "Static"</li>
+        </ol>
+    </td>
+  </tr>
+  <tr>
+    <th rowspan="2">Layers</th>
+    <td id=parameters>Id</td>
+    <td>Determines the layer id as defined in the layer section.</td>
+  </tr>
+  <tr>
+    <td id=parameters>Field Name</td>
+    <td>Determines the field name of the field to be used to filter with the range slider. It is important to note that the field name has to be used and not the alias of the field.</td>
+  </tr>
+</table>
+
+<p><br></p></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../../guides/comparison/" title="Enable Layer Comparison"><span>Previous</span></a></div>
+        <div class="next"><a href="../thematicslider/" title="Thematic Slider"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../javascripts/extra.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

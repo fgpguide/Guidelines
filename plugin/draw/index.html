@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Draw ToolBar &mdash; Guidelines for FGP Plugins</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../../stylesheets/extra.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> Guidelines for FGP Plugins</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">Introduction</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Guidelines</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/fgpauthor/">FGP Author Tool</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/timeseries/">Visualize Temporal Data</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/comparison/">Enable Layer Comparison</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Plugins</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../rangetimeslider/">Range/Time Slider</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../thematicslider/">Thematic Slider</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../swiper/">Swiper</a></li>
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Draw ToolBar</a>
+<ul class="subnav"><ul>
+    
+        <li class="toctree-l3"><a class="nav-item toc"  href="#overview">Overview</a></li>
+        
+            <li class="toctree-l4"><a class="nav-item toc"  href="#try-it">Try It</a></li>
+            
+        
+    
+    </ul>
+
+    
+</ul></li>
+    <li class="toctree-l2"><a class="nav-item" href="../aoi/">Area of Interest</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../coord/">Coordinates Info</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">About</button>
+<ul class="subnav">
+    <li class="toctree-l2">
+<a class="nav-item" href="../../about/">Support</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="previous"><a href="../swiper/">&laquo; Previous</a></div>
+    <div class="next"><a href="../aoi/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> Guidelines for FGP Plugins</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Plugins</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="overview">Overview</h1>
+<p>The Draw Toolbar allows you to interact directly with the map. Functionally, it gives you the ability to create new geometries by drawing them on the map.
+The Drawing toolbar contains a collection of icon buttons that allows the user to draw shapes and images in the document.</p>
+<p><strong>Feature Highlight</strong></p>
+<p>Some of the features that the Draw Toolbar provides:</p>
+<ul>
+<li>Draw Points / Lines / Polygons</li>
+<li>Edit / Erase created objects</li>
+<li>Save / Upload Drawing</li>
+<li>Includes distance to your lines, perimeter and area to your polygons.</li>
+</ul>
+<p><br></p>
+<table>
+  <tr>
+    <th>Button</th>
+    <th>Name</th>
+    <th>Function</th>
+  </tr>
+    <tr>
+    <td><img src="../../assets/imgs/draw/image_01.png" class="draw_table"></td>
+    <td>Color Picker</td>
+    <td>Allows you to select different colors</td>
+  </tr>
+  <tr>
+    <td><img src="../../assets/imgs/draw/image_02.png" class="draw_table"></td>
+    <td>New Marker</td>
+    <td>Draws a marker point</td>
+  </tr>
+    <tr>
+    <td><img src="../../assets/imgs/draw/image_03.png" class="draw_table"></td>
+    <td>New Line</td>
+    <td>Draws a line and includes the distance of the line</td>
+  </tr>
+    <tr>
+    <td><img src="../../assets/imgs/draw/image_04.png" class="draw_table"></td>
+    <td>New Polygon</td>
+    <td>Draws a polygon and includes the area and perimeter of the shape</td>
+  </tr>
+    <tr>
+    <td><img src="../../assets/imgs/draw/image_05.png" class="draw_table"></td>
+    <td>Edit Vertices</td>
+    <td>Allows you to edit the vertices of the selected line, polygon, or curve</td>
+  </tr>
+    <tr>
+    <td><img src="../../assets/imgs/draw/image_06.png" class="draw_table"></td>
+    <td>Erase</td>
+    <td>Erase selected features</td>
+  </tr>
+    <tr>
+    <td><img src="../../assets/imgs/draw/image_07.png" class="draw_table"></td>
+    <td>Save</td>
+    <td>Saves graphics to file</td>
+  </tr>
+    <tr>
+    <td><img src="../../assets/imgs/draw/image_08.png" class="draw_table"></td>
+    <td>Upload</td>
+    <td>Uploads saved graphic file to the map</td>
+  </tr>
+</table>
+
+<hr />
+<p><br></p>
+<h2 id="try-it">Try It</h2>
+<iframe id="iframe1" allowfullscreen=true importance = high data-src="https://jolevesq.github.io/contributed-plugins/draw/samples/draw-index.html"></iframe></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../swiper/" title="Swiper"><span>Previous</span></a></div>
+        <div class="next"><a href="../aoi/" title="Area of Interest"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../javascripts/extra.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

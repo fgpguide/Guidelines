@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>FGP Author Tool &mdash; Guidelines for FGP Plugins</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../../stylesheets/extra.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> Guidelines for FGP Plugins</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">Introduction</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Guidelines</button>
+<ul class="subnav">
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">FGP Author Tool</a>
+<ul class="subnav"><ul>
+    
+        <li class="toctree-l3"><a class="nav-item toc"  href="#overview">Overview</a></li>
+        
+            <li class="toctree-l4"><a class="nav-item toc"  href="#getting-started">Getting Started</a></li>
+            
+            <li class="toctree-l5"><a class="nav-item toc"  href="#adding-a-new-layer">Adding a new layer</a></li>
+            
+            <li class="toctree-l5"><a class="nav-item toc"  href="#enable-plugins">Enable Plugins</a></li>
+            
+            <li class="toctree-l5"><a class="nav-item toc"  href="#validate-and-inegrate">Validate and Inegrate</a></li>
+            
+        
+    
+    </ul>
+
+    
+</ul></li>
+    <li class="toctree-l2"><a class="nav-item" href="../timeseries/">Visualize Temporal Data</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../comparison/">Enable Layer Comparison</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Plugins</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../plugin/rangetimeslider/">Range/Time Slider</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../plugin/thematicslider/">Thematic Slider</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../plugin/swiper/">Swiper</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../plugin/draw/">Draw ToolBar</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../plugin/aoi/">Area of Interest</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../plugin/coord/">Coordinates Info</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">About</button>
+<ul class="subnav">
+    <li class="toctree-l2">
+<a class="nav-item" href="../../about/">Support</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="previous"><a href="../..">&laquo; Previous</a></div>
+    <div class="next"><a href="../timeseries/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> Guidelines for FGP Plugins</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Guidelines</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="overview">Overview</h1>
+<p>The FGP Author Tool provides an interface to test and integrate the plugins with your map service. It simply provides a user-friendly interface that allows you to configure the plugins seamlessly, easily, and without the need to manually create configuration files.</p>
+<p>The interface can be broken up into three critical areas. <strong>(1)</strong> On your left you will find the navigation pane. This allows you to move between the different elements of the web application. <strong>(2)</strong> In the middle, you will find corresponding parameters that you will be able to configure. <strong>(3)</strong> Finally, on the right, you will find the summary pane. This allows you to validate and preview your maps. It also provides a way to indicate any errors and where those errors need to fix before you can preview your map.</p>
+<p><img alt="FGP Author Tool" src="../../assets/imgs/fgpauthor/overview.png" /></p>
+<hr />
+<p><br></p>
+<h2 id="getting-started">Getting Started</h2>
+<p>To get started you can visit the FGP Authoring Tool <a href="https://jolevesq.github.io/fgpa-apgf/samples/fgpv-author.html" target="_blank">Website</a></p>
+<p>Your workflow can be summarized into three main steps.</p>
+<p><img alt="FGP Author Tool" src="../../assets/imgs/fgpauthor/fgpauthor1.png" /></p>
+<blockquote>
+<p><br></p>
+</blockquote>
+<h3 id="adding-a-new-layer">Adding a new layer</h3>
+<p><strong>Step 1.</strong> From the navigation pane, select the Map option.</p>
+<p><strong>Step 2.</strong> Select “Layers” from the option, and click on the Add button to load the parameters to add layers to the viewer.</p>
+<p><strong>Step 3.</strong> Select the type of map service that you are going to load. You have several options to choose from. Identify the best option that matches the type of map service that relates to you.</p>
+<p><strong>Step 4.</strong> Provide a name for the that will be displayed for the layer. If it is not present the viewer will attempt to scrape this information.</p>
+<p><strong>Step 5.</strong> Provide the URL of the map service. This is the service endpoint of the layer. It should match the type provided in layer type.</p>
+<p><strong>Extra Steps</strong> Some layer types require extra inputs to be completed before it will load.</p>
+<details>
+<summary>Esri Dynamic</summary>
+<p>
+
+<b> Step 5a.</b> Click on the Add button under Layer Entries. This will open another section where you will be able to input the “Index” of the layer. The index of the layer references the ID of the map service.
+Take for example this layer, (https://webservices.maps.canada.ca/arcgis/rest/services/NRCan/forest_industry_hotspots_en/MapServer/0) , the ID of this layer is 0 which corresponds to the Index.
+
+</p>
+
+<p>
+<b> Step 5b.</b> Optionally, you can enter a descriptive name for the layer under the Name field. However, doing so will override the name coming from the service.
+</p>
+</details>
+
+<details>
+<summary>OGC WMS</summary>
+<p>
+
+<b> Step 5a.</b> Click on the Add button under Layer Entries. This will open another section where you will be able to input the ID of the layer entry in the WMS. This is the value between the <Name>….</Name> tag of the layer.
+Optionally, you can enter a descriptive name for the layer under the Name field. However, doing so will override the name coming from the service.
+
+</p>
+<p>
+<b> Step 5b.</b> OGC WMS also includes options to include Feature info MIME type. If specified indicates that GetFeatureInfo should be enabled for this WMS and indicates the format that should be requested
+Legend MIM type if specified indicates that GetLegendGraphics should be enabled for this WMS and indicates the format that should be requested.
+
+</p>
+</details>
+
+<p><strong>Step 6.</strong> Navigate to your left. You will find the Validate and Preview button. Pressing on the Validate button will ensure that all parameters are checked and meet requirements for reviewing.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can add as many layers as needed</p>
+</div>
+<figure>
+<video style="width:100%"  controls>
+  <source src="../../assets/videos/fgpauthor/fgpauthor1.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</figure>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If any issues are identified. It will be pointed out for your attention.</p>
+<p><video style="width:100%"  controls>
+<source src="../../assets/videos/fgpauthor/fgpauthor4.webm" type="video/webm">
+Your browser does not support the video tag.
+</video></p>
+</div>
+<hr />
+<p><br></p>
+<h3 id="enable-plugins">Enable Plugins</h3>
+<p>Now that you have your layers loaded and working properly.</p>
+<p>Navigate to the Plugins tab.</p>
+<blockquote>
+<p>There you will find all the plugins available to be used with your map. As expected, extra parameters will be required to allow you to finalize the integration of the plugins with your dataset. These can be found by following these links.</p>
+<p><a href="../../plugin/rangetimeslider/#getting-started">Range/Time Slider Plugin</a></p>
+<p><a href="../../plugin/thematicslider/#getting-started">Thematic Slider Plugin</a></p>
+<p><a href="../../plugin/swiper/#getting-started">Swiper Plugin</a></p>
+<p><a href="">Chart Plugin</a></p>
+<p><a href="../../plugin/draw/#overview">Draw Toolbar Plugin</a></p>
+</blockquote>
+<figure>
+<video style="width:100%"  controls>
+  <source src="../../assets/videos/fgpauthor/fgpauthor2.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</figure>
+
+<hr />
+<p><br></p>
+<h3 id="validate-and-inegrate">Validate and Inegrate</h3>
+<p>Finally, ensure that you validate and preview to make sure that everything works as it should.</p>
+<p>You can save your work as a .json configuration file and also upload that file to resume or make changes as required.</p>
+<figure>
+<video style="width:100%"  controls>
+  <source src="../../assets/videos/fgpauthor/fgpauthor3.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</figure></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../.." title="Introduction"><span>Previous</span></a></div>
+        <div class="next"><a href="../timeseries/" title="Visualize Temporal Data"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../javascripts/extra.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

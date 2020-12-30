@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+html {
+  font-size: 16px;
+}
+
+body,
+button {
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+}
+h1 {
+  color: #4b6ccf;
+}
+
+table {
+  width: 100%;
+  font-size: 12pt;
+  font-family: sans-serif;
+}
+td {
+  text-align: left;
+  font-weight: bold;
+  height: 40px;
+  line-height: 1.6;
+  padding: 10px;
+}
+th {
+  border: 1px solid rgb(0, 0, 0);
+}
+#parameters {
+  font-weight: bold;
+  color: blue;
+  font-style: italic;
+}
+
+#tablelist {
+  padding: 10px;
+  line-height: 1.9;
+  font-family: sans-serif;
+}
+
+figure {
+  height: 75%;
+  /* margin: 1.25rem auto;
+  padding: 1.051%; */
+  width: 75%;
+  border: 2px solid;
+}
+
+iframe {
+  width: 960px;
+  height: 550px;
+}
+
+img[class="guide"] {
+  width: 500px;
+  margin-left: 40px;
+}
+
+img[alt="workflow"] {
+  width: 800px;
+}
+
+img[alt="bar1"] {
+  width: 250px;
+}
+
+img[alt="rangeslider1"] {
+  width: 900x;
+}
+
+img[alt="swiper1"] {
+  width: 300px;
+}
+
+img[alt="bar1"] {
+  width: 950px;
+}
+
+img[alt="thematicslider1"] {
+  width: 600px;
+}
+
+img[alt="thematicslider2"] {
+  width: 300px;
+}
+
+img[alt="thematicslider3"] {
+  width: 235px;
+}
+
+img[class="guide"] {
+  width: 700px;
+  border: 2px solid black;
+  margin-left: 40px;
+}
+
+img[class="draw_table"] {
+  width: 60px;
+  height: 60px;
+  border: 2px solid black;
+}
+.admonition.tip {
+  background: white;
+  /* border-left: solid 4px #3498db; */
+  box-shadow: 7px 12px 13px 0px #888888;
+  /* font-style: italic; */
+  width: 95%;
+  border-radius: 15px;
+}
+
+.admonition p {
+  margin-right: 20px;
+}
+
+.tip p.admonition-title {
+  color: white;
+  background: #668cff;
+  margin: 0px;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+.tip p.admonition-title:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f05a";
+  font-weight: 900;
+  padding-right: 5px;
+  color: white;
+}
+
+.admonition.note {
+  background: white;
+  /* border-left: solid 4px #555599; */
+  box-shadow: 7px 12px 13px 0px #888888;
+  /* font-style: italic; */
+  width: 95%;
+  border-radius: 15px;
+}
+
+.note p.admonition-title {
+  color: white;
+  background: #555599;
+  margin: 0px;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+.note p.admonition-title:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f303";
+  font-weight: 900;
+  padding-right: 5px;
+  color: white;
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Swiper &mdash; Guidelines for FGP Plugins</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../../stylesheets/extra.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> Guidelines for FGP Plugins</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">Introduction</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Guidelines</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/fgpauthor/">FGP Author Tool</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/timeseries/">Visualize Temporal Data</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/comparison/">Enable Layer Comparison</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Plugins</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../rangetimeslider/">Range/Time Slider</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../thematicslider/">Thematic Slider</a></li>
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Swiper</a>
+<ul class="subnav"><ul>
+    
+        <li class="toctree-l3"><a class="nav-item toc"  href="#overview">Overview</a></li>
+        
+            <li class="toctree-l4"><a class="nav-item toc"  href="#best-practices">Best Practices</a></li>
+            
+        
+            <li class="toctree-l4"><a class="nav-item toc"  href="#use-case-examples">Use Case Examples</a></li>
+            
+        
+            <li class="toctree-l4"><a class="nav-item toc"  href="#getting-started">Getting Started</a></li>
+            
+            <li class="toctree-l5"><a class="nav-item toc"  href="#configure-the-swiper-plugin">Configure the Swiper Plugin</a></li>
+            
+            <li class="toctree-l5"><a class="nav-item toc"  href="#definition-of-parameters">Definition of Parameters</a></li>
+            
+        
+    
+    </ul>
+
+    
+</ul></li>
+    <li class="toctree-l2"><a class="nav-item" href="../draw/">Draw ToolBar</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../aoi/">Area of Interest</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../coord/">Coordinates Info</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">About</button>
+<ul class="subnav">
+    <li class="toctree-l2">
+<a class="nav-item" href="../../about/">Support</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="previous"><a href="../thematicslider/">&laquo; Previous</a></div>
+    <div class="next"><a href="../draw/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> Guidelines for FGP Plugins</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Plugins</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="overview">Overview</h1>
+<p>The Swiper enables you to easily compare the content of different layers. It provides a horizontal view mode which allows you to interact with the map. You can slide the swipe tool to reveal the content of another layer.</p>
+<p>The plugin works with the following mapping services:</p>
+<ul>
+<li>ESRI Feature</li>
+<li>ESRI Dynamic</li>
+<li>ESRI Image</li>
+<li>OGC WMS</li>
+<li>OGC WFS</li>
+<li>OGC WCS</li>
+</ul>
+<p>More information on Web map services can be found <a href="https://www.nrcan.gc.ca/earth-sciences/geomatics/canadas-spatial-data-infrastructure/8902" target="_blank">here.</a></p>
+<p><br></p>
+<h2 id="best-practices">Best Practices</h2>
+<p><strong>Get the best out of the Swiper Plugin</strong></p>
+<p>The Swiper is a visualization enhancer used to compare different layers. For example, you may want to use it to show before-and-after imagery of a flood, or display two related thematic layers in a map. You have the capability to move the slider back and forth to see the changes.</p>
+<p><strong>Tips for interacting with the Swiper Plugin</strong></p>
+<p>The recommended way to utilize this plugin effectively is as a comparative tool. You can use the swiper plugin to compare layers for an extra layer of visual analysis. As you swipe, the enabled layer will be temporarily erased relative to the position of the swiper.
+It is recommended that the layer with the swiper plugin enabled should be the top most layer in the legend tree.</p>
+<p><img alt="swiper1" src="../../assets/imgs/swiper/swiper1.png" /></p>
+<p>In the example above, the Swiper plugin is enable on the top most layer. It is important to note that when using the swiper tool with two different layers, the layer with the swiper tool enabled can obscure the underlying layer.</p>
+<p>The tool could be used to explore satellite or aerial images of locations before and after disasters such as wildfires or landslides. You can also use this tool to compare historical and current maps to see how change occurs over time.</p>
+<figure>
+<video style="width:100%"  controls>
+  <source src="../../assets/videos/swiper/swiper1.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</figure>
+
+<p><br></p>
+<h2 id="use-case-examples">Use Case Examples</h2>
+<hr />
+<p><strong>Example 1</strong></p>
+<p>In this example, the swiper plugin was used to highlight the changes in land cover for Agricultural Regions for Canada between 1995 and <a href="https://gcgeo.gc.ca/geonetwork/metadata/eng/16d2f828-96bb-468d-9b7d-1307c81e17b8" target="_blank">2000</a>. These layers are examples of ESRI Image layer being used with the swiper plugin.</p>
+<iframe id="iframe1" allowfullscreen=true importance = high data-src="https://jolevesq.github.io/contributed-plugins/swiper/samples/swiper-index.html?sample=2"></iframe>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To identify the active layer of the Swiper plugin, simply place your mouse cursor over the vertical bar of the plugin.</p>
+</div>
+<p><br></p>
+<p><strong>Example 2</strong></p>
+<p>In this example, the swiper plugin was used to highlight the changes in land cover of Canada between 2010 and <a href="https://gcgeo.gc.ca/geonetwork/metadata/eng/4e615eae-b90c-420b-adee-2ca35896caf6" target="_blank">2015</a>.</p>
+<p>It is important to note that in this example, the two land cover layers are very similiar. However, they are subtle difference which can be easily identified while using the Swiper plugin.</p>
+<iframe id="iframe2" allowfullscreen=true importance = high data-src="https://jolevesq.github.io/contributed-plugins/swiper/samples/swiper-index.html?sample=3"></iframe>
+
+<p><br></p>
+<p><strong>Example 3</strong></p>
+<p>In this example, the swiper plugin was used to highlight the Hydro and Petroleum power plants. The swiper plugin was enabled on the 100MW and 1MW Hydropower plants. Using the Swiper plugin you are quickly able to compare the locations of the powerplants while focusing on areas of interest.</p>
+<iframe id="iframe3" allowfullscreen=true importance = high data-src="https://jolevesq.github.io/contributed-plugins/swiper/samples/swiper-index.html?sample=1"></iframe>
+
+<hr />
+<p><br></p>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="configure-the-swiper-plugin">Configure the Swiper Plugin</h3>
+<p><strong>Step 1.</strong> Ensure the at the Swiper Plugin is enabled.</p>
+<p><strong>Step 2.</strong> Under the Layer Id, Ensure that the correct layer is selected.</p>
+<blockquote>
+<p>The layer selected here will be the layer the swiper plugin is enabled on.</p>
+</blockquote>
+<figure>
+<video style="width:100%"  controls>
+  <source src="../../assets/videos/swiper/swiper2.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</figure>
+
+<hr />
+<h3 id="definition-of-parameters">Definition of Parameters</h3>
+<p>To configure this plugin to work with a mapping web service the following parameters are required.</p>
+<table>
+  <tr>
+    <th></th>
+    <th>Parameters</th>
+    <th>Description</th>
+  </tr>
+ <tr>
+    <th rowspan="2">General</th>
+    <td id=parameters>Type</td>
+    <td>Determines of the swiper is vertical or horizontal. Note: Only vertical is supported at the moment</td>
+  <tr>
+    <td id=parameters>Keyboard Offset</td>
+    <td>Determines the number of pixels to move the swiper when the keyboard is used for navigation</td>
+  </tr>
+  <tr>
+    <th rowspan="1">Layers</th>
+    <td id=parameters>Id</td>
+    <td>Layer id as defined in layer section</td>
+  </tr>
+</table></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../thematicslider/" title="Thematic Slider"><span>Previous</span></a></div>
+        <div class="next"><a href="../draw/" title="Draw ToolBar"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../javascripts/extra.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

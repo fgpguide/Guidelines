@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Thematic Slider &mdash; Guidelines for FGP Plugins</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../../stylesheets/extra.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> Guidelines for FGP Plugins</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">Introduction</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Guidelines</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/fgpauthor/">FGP Author Tool</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/timeseries/">Visualize Temporal Data</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/comparison/">Enable Layer Comparison</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Plugins</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../rangetimeslider/">Range/Time Slider</a></li>
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Thematic Slider</a>
+<ul class="subnav"><ul>
+    
+        <li class="toctree-l3"><a class="nav-item toc"  href="#what-is-the-thematic-slider">What is the Thematic Slider</a></li>
+        
+            <li class="toctree-l4"><a class="nav-item toc"  href="#advantages-of-the-thematic-slider">Advantages of the Thematic Slider</a></li>
+            
+        
+            <li class="toctree-l4"><a class="nav-item toc"  href="#best-practices">Best Practices</a></li>
+            
+        
+            <li class="toctree-l4"><a class="nav-item toc"  href="#use-case-examples">Use Case Examples</a></li>
+            
+        
+            <li class="toctree-l4"><a class="nav-item toc"  href="#configure-the-thematic-slider-plugin">Configure the Thematic Slider Plugin</a></li>
+            
+        
+            <li class="toctree-l4"><a class="nav-item toc"  href="#getting-started">Getting Started</a></li>
+            
+            <li class="toctree-l5"><a class="nav-item toc"  href="#data-preparation">Data Preparation</a></li>
+            
+            <li class="toctree-l5"><a class="nav-item toc"  href="#configure-the-thematic-slider">Configure the Thematic Slider</a></li>
+            
+            <li class="toctree-l5"><a class="nav-item toc"  href="#definition-of-parameters">Definition of Parameters</a></li>
+            
+        
+    
+    </ul>
+
+    
+</ul></li>
+    <li class="toctree-l2"><a class="nav-item" href="../swiper/">Swiper</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../draw/">Draw ToolBar</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../aoi/">Area of Interest</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../coord/">Coordinates Info</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">About</button>
+<ul class="subnav">
+    <li class="toctree-l2">
+<a class="nav-item" href="../../about/">Support</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="previous"><a href="../rangetimeslider/">&laquo; Previous</a></div>
+    <div class="next"><a href="../swiper/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> Guidelines for FGP Plugins</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Plugins</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="what-is-the-thematic-slider">What is the Thematic Slider</h1>
+<p>The Thematic Slider plugin provides a way to quickly visualize a theme as it loops through an array of layers to highlight accumulations or evolution of geolocation data. The thematic slider offers one of the simplest ways to display change over time for raster datasets that are not time enabled. At the same time, the plugin can show title and description for each of the layers allowing you to give greater context and meaning.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A thematic map can also show the spatial distribution of identifiable
+earth surface features. Themes can range from, for example, categories
+such as vegetation, soil and surface water. It is implied in the construction of a theme.</p>
+</div>
+<p><br></p>
+<h2 id="advantages-of-the-thematic-slider">Advantages of the Thematic Slider</h2>
+<p><strong>What are the advantages of using the Thematic Slider plugin?</strong></p>
+<p>The Thematic Slider plugin offers many advantages to both the data contributor and the user.</p>
+<ol>
+<li>
+<p>If the data contributor has multiple layers each corresponding to a single map for a particular time:</p>
+<ul>
+<li>
+<p>The Thematic Slider offers the ability to list all the layers to be displayed in order one after the other.</p>
+</li>
+<li>
+<p>The plugin allows for the ability to automatically cycle through / animate the layers when the map is loaded.</p>
+</li>
+<li>
+<p>If there is an extra context that can further explain/enhance the user experience or provide more information about the layer, the plugin allows for it to be placed.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The main advantage to the user is the overall experience of being able to view cumulative change over time with no effort. Having all the layers being pre-organized in order and the extra context provided, the user can quickly make any inferences from the dataset all within a short time.</p>
+</li>
+</ol>
+<p><br></p>
+<h2 id="best-practices">Best Practices</h2>
+<p><strong>Get the best out of the Thematic Slider</strong></p>
+<p>The Thematic Slider plugin is best used in cases where there are multiple raster layers (static maps) that correspond to a particular time. In this regard, it provides the ability to focus on the change occurring over each time as it cycles through each map.</p>
+<p>Take, for example, this map service, <a href="https://gcgeo.gc.ca/geonetwork/metadata/eng/99875416-4ef0-4dc1-889f-aa098beb7950" target="_blank">Fire Season Length under RCP 8.5</a>.</p>
+<p><img alt="thematicslider1" src="../../assets/imgs/thematicslider/thematicslider1.png" /></p>
+<p>If we look at the available layers corresponding to Fire Season Length under RCP 8.5, we can note that 3 different map layers are representing <strong>Short Term (2011-2040)</strong>, <strong>Medium Term (2041-2070)</strong> and <strong>Long Term (2071-2100)</strong>. If this were to be displayed all together on a single map, some issues may arise such as:</p>
+<ul>
+<li>When all the layers are enabled, overlapping features will be hidden and it will be difficult to identify any cumulative change.</li>
+<li>It is easy to disorganize the order of the layers. This is especially true when dealing with large datasets.</li>
+</ul>
+<p>Integrating the Thematic Slider plugin with this rich dataset allows the ability to cycle through each map layer providing any extra context as needed. The user can quickly navigate between each layer individually as well as the option to cycle through the layer at a predetermined time.</p>
+<iframe id="iframe1" allowfullscreen=true importance = high data-src="https://jolevesq.github.io/contributed-plugins/thematic-slider/samples/thematic-slider-index.html?sample=9"></iframe>
+
+<p><br></p>
+<h2 id="use-case-examples">Use Case Examples</h2>
+<hr />
+<p>In this example, the Thematic Slider plugin was used to highlight <a href="https://gcgeo.gc.ca/geonetwork/metadata/eng/e8896575-1fb8-4e53-8acd-8579c3c055c2" target="_blank">xSO4D wet deposition maps 1981-2015</a>. This map service has a total of 36 layers each showing the XS04D. The thematic slider provides the ability to load each layer and cycle through them highlighting change over time.</p>
+<p><img alt="thematicslider2" src="../../assets/imgs/thematicslider/thematicslider2.png" /> <img alt="thematicslider3" src="../../assets/imgs/thematicslider/thematicslider3.png" /></p>
+<p>This particular map service has a total of 36 layers present. Although using all 36 layers is possible it is not recommended. Loading all 36 maps at the same time results in extra time required for loading.
+For this use case, the thematic slider was used to show cumulative change for every 10 years between 1981 – 2015.</p>
+<iframe id="iframe1" allowfullscreen=true importance = high data-src="https://jolevesq.github.io/contributed-plugins/thematic-slider/samples/thematic-slider-index.html?sample=8"></iframe>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It is recommended to use the thematic slider with no more than 15 layers at a time. Testing has shown that a maximum of 15 layers meets the optimal loading time as recommended by the FGP Data team.</p>
+<p>If there is a case where there are multiple layers to be used with the thematic slider, you may consider adjusting the time between the layers. For example, if there is a dataset consisting of raster layers spanning from 1990 – 2020, you can consider adding layers after every 10 years. This simple change allows overall load time performance to improve as well as highlighting change occurring every decade</p>
+</div>
+<hr />
+<p><br></p>
+<h2 id="configure-the-thematic-slider-plugin">Configure the Thematic Slider Plugin</h2>
+<p>The plugin works with the following mapping services:</p>
+<ul>
+<li>ESRI Feature</li>
+<li>ESRI Dynamic</li>
+<li>OGC WMS</li>
+</ul>
+<p>More information on Web map services can be found <a href="https://www.nrcan.gc.ca/earth-sciences/geomatics/canadas-spatial-data-infrastructure/8902" target="_blank">here.</a></p>
+<hr />
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="data-preparation">Data Preparation</h3>
+<p>To get started we need to ensure that your data is prepared in a format that will work well with the Thematic Slider plugin.</p>
+<blockquote>
+<p>(i) For time-series animation, the thematic slider works best when each layer corresponds to a specific time reference.Similiar to what is outlined in the Use cases above.</p>
+<p>(ii) For other use cases, once you have a layer corresponding to a map service then it will work with the Thematic Slider.</p>
+</blockquote>
+<h3 id="configure-the-thematic-slider">Configure the Thematic Slider</h3>
+<p><strong>Step 1.</strong> Ensure that the Thematic Slider Plugin is enabled.</p>
+<p><img alt="Guide1" class="guide" src="../../assets/imgs/thematicslider/Guide1.png" /></p>
+<p><strong>Step 2.</strong> Select the options you want the Thematic Slider to do:</p>
+<ul>
+<li>Start animation on load</li>
+<li>Play the animation on loop</li>
+<li>Stack layer visibility</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, the following will be enabled:</p>
+<ul>
+<li>Open by default</li>
+<li>Enable description control</li>
+<li>Enable slider control</li>
+</ul>
+</div>
+<p><strong>Step 3.</strong> Under Layers, select the layer which the plugin will be enabled on.
+Set the Animation duration, Title for layer animation, and Description for layer animation</p>
+<p><img alt="Guide1" class="guide" src="../../assets/imgs/thematicslider/Guide2.png" /></p>
+<p><strong>Step 4.</strong> Optional, Click on the Add Button to create new entries for additional layers.</p>
+<p><img alt="Guide1" class="guide" src="../../assets/imgs/thematicslider/Guide3.png" /></p>
+<p><img alt="Guide1" class="guide" src="../../assets/imgs/thematicslider/Guide4.png" /></p>
+<h3 id="definition-of-parameters">Definition of Parameters</h3>
+<p>To configure this plugin to work with a mapping web service the following parameters are required.</p>
+<table>
+  <tr>
+    <th></th>
+    <th>Parameters</th>
+    <th>Description</th>
+  </tr>
+ <tr>
+    <th rowspan="6">General</th>
+    <td id=parameters>Open</td>
+    <td>This plugin can be set to open automatically when a map loads. By default it is set open on map load</td>
+  </tr>
+  <tr>
+    <td id=parameters>Auto run</td>
+    <td>Determines if the plugin will start the animation automatically</td>
+  </tr>
+    <tr>
+    <td id=parameters> Loop</td>
+    <td>Determines if the plugin will restart the animation automatically when it reaches the end of the array</td>
+  </tr>
+    <tr>
+    <td id=parameters>Description</td>
+    <td>Determines if the description control is available</td>
+  </tr>
+    <tr>
+    <td id=parameters>Slider</td>
+    <td>Determines if the slider controls are available. Note: Description needs to be true for the slider to be enabled</td>
+  </tr>
+    <tr>
+    <td id=parameters>Stack</td>
+    <td>Determines if only the active layer is shown or if the visibility of all the layers are stacked. Layers are stacked from -Layer 0 to the active layer</td>
+  </tr>
+  <tr>
+    <th rowspan="5">Layers</th>
+    <td id=parameters>Id</td>
+    <td>Determines the layer id as defined in the layer section.</td>
+  </tr>
+  <tr>
+    <td id=parameters>Field</td>
+    <td>layer id as define in layer section</td>
+  </tr>
+    <tr>
+    <td id=parameters>Duration</td>
+    <td>duration in millisecond to stay on the active layer</td>
+  </tr>
+    <tr>
+    <td id=parameters>Title</td>
+    <td>Title to show in description control</td>
+  </tr>
+    <tr>
+    <td id=parameters>Description</td>
+    <td>Text to show inside description control</td>
+  </tr>
+</table></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../rangetimeslider/" title="Range/Time Slider"><span>Previous</span></a></div>
+        <div class="next"><a href="../swiper/" title="Swiper"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../javascripts/extra.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>
