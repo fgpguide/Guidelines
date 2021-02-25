@@ -44,12 +44,19 @@
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../../guides/fgpauthor/">FGP Author Tool</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../guides/timeseries/">Visualize Temporal Data</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/complexdata/">Visualize Complex Data</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../guides/comparison/">Enable Layer Comparison</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">Plugins</button>
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../rangetimeslider/">Range/Time Slider</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../thematicslider/">Thematic Slider</a></li>
+    <li class="toctree-l2"><button class="section nav-item hide">Charting</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../piechart/">Pie Chart</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../barchart/">Bar Chart</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../linechart/">Line Chart</a></li>
+</ul></li>
     <li class="toctree-l2 current"><a class="nav-item current" href="./">Swiper</a>
 <ul class="subnav"><ul>
     
@@ -65,7 +72,9 @@
             
             <li class="toctree-l5"><a class="nav-item toc"  href="#configure-the-swiper-plugin">Configure the Swiper Plugin</a></li>
             
+            
             <li class="toctree-l5"><a class="nav-item toc"  href="#definition-of-parameters">Definition of Parameters</a></li>
+            
             
         
     
@@ -81,11 +90,13 @@
 <ul class="subnav">
     <li class="toctree-l2">
 <a class="nav-item" href="../../about/">Support</a></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="../../about.fr.md">Soutien</a></li>
 </ul></li>
                 </ul>
             </nav>
             <div class="repo">
-    <div class="previous"><a href="../thematicslider/">&laquo; Previous</a></div>
+    <div class="previous"><a href="../linechart/">&laquo; Previous</a></div>
     <div class="next"><a href="../draw/">Next &raquo;</a></div>
 </div>
         </aside>
@@ -115,13 +126,13 @@
 <p>More information on Web map services can be found <a href="https://www.nrcan.gc.ca/earth-sciences/geomatics/canadas-spatial-data-infrastructure/8902" target="_blank">here.</a></p>
 <p><br></p>
 <h2 id="best-practices">Best Practices</h2>
-<p><strong>Get the best out of the Swiper Plugin</strong></p>
-<p>The Swiper is a visualization enhancer used to compare different layers. For example, you may want to use it to show before-and-after imagery of a flood, or display two related thematic layers in a map. You have the capability to move the slider back and forth to see the changes.</p>
+<p><strong>Getting the best out of the Swiper Plugin</strong></p>
+<p>The Swiper is a visualization enhancer used to compare different layers. For example, you may want to use it to show before-and-after imagery of a flood or display two related thematic layers in a map. You have the capability to move the slider back and forth to see the changes.</p>
 <p><strong>Tips for interacting with the Swiper Plugin</strong></p>
 <p>The recommended way to utilize this plugin effectively is as a comparative tool. You can use the swiper plugin to compare layers for an extra layer of visual analysis. As you swipe, the enabled layer will be temporarily erased relative to the position of the swiper.
-It is recommended that the layer with the swiper plugin enabled should be the top most layer in the legend tree.</p>
+It is recommended that the layer with the swiper plugin enabled should be the topmost layer in the legend tree.</p>
 <p><img alt="swiper1" src="../../assets/imgs/swiper/swiper1.png" /></p>
-<p>In the example above, the Swiper plugin is enable on the top most layer. It is important to note that when using the swiper tool with two different layers, the layer with the swiper tool enabled can obscure the underlying layer.</p>
+<p>In the example above, the Swiper plugin is enabled on the topmost layer. It is important to note that when using the swiper tool with two different layers, the layer with the swiper tool enabled can obscure the underlying layer.</p>
 <p>The tool could be used to explore satellite or aerial images of locations before and after disasters such as wildfires or landslides. You can also use this tool to compare historical and current maps to see how change occurs over time.</p>
 <figure>
 <video style="width:100%"  controls>
@@ -156,7 +167,7 @@ Your browser does not support the video tag.
 <p><br></p>
 <h2 id="getting-started">Getting Started</h2>
 <h3 id="configure-the-swiper-plugin">Configure the Swiper Plugin</h3>
-<p><strong>Step 1.</strong> Ensure the at the Swiper Plugin is enabled.</p>
+<p><strong>Step 1.</strong> Ensure that the Swiper Plugin is enabled.</p>
 <p><strong>Step 2.</strong> Under the Layer Id, Ensure that the correct layer is selected.</p>
 <blockquote>
 <p>The layer selected here will be the layer the swiper plugin is enabled on.</p>
@@ -180,7 +191,7 @@ Your browser does not support the video tag.
  <tr>
     <th rowspan="2">General</th>
     <td id=parameters>Type</td>
-    <td>Determines of the swiper is vertical or horizontal. Note: Only vertical is supported at the moment</td>
+    <td>Determines oi the swiper is vertical or horizontal. Note: Only vertical is supported at the moment</td>
   <tr>
     <td id=parameters>Keyboard Offset</td>
     <td>Determines the number of pixels to move the swiper when the keyboard is used for navigation</td>
@@ -188,12 +199,12 @@ Your browser does not support the video tag.
   <tr>
     <th rowspan="1">Layers</th>
     <td id=parameters>Id</td>
-    <td>Layer id as defined in layer section</td>
+    <td>Layer id as defined in the layer section</td>
   </tr>
 </table></div>
                 <footer>
     <div class="footer-buttons">
-        <div class="previous"><a href="../thematicslider/" title="Thematic Slider"><span>Previous</span></a></div>
+        <div class="previous"><a href="../linechart/" title="Line Chart"><span>Previous</span></a></div>
         <div class="next"><a href="../draw/" title="Draw ToolBar"><span>Next</span></a></div>
     </div>
     <div class="footer-note">

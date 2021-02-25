@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Line Chart &mdash; Guidelines for FGP Plugins</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" href="../../stylesheets/extra.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> Guidelines for FGP Plugins</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">Introduction</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Guidelines</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/fgpauthor/">FGP Author Tool</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/timeseries/">Visualize Temporal Data</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/complexdata/">Visualize Complex Data</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/comparison/">Enable Layer Comparison</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Plugins</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../rangetimeslider/">Range/Time Slider</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../thematicslider/">Thematic Slider</a></li>
+    <li class="toctree-l2 current"><button class="section nav-item">Charting</button>
+<ul class="subnav">
+    <li class="toctree-l3"><a class="nav-item" href="../piechart/">Pie Chart</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../barchart/">Bar Chart</a></li>
+    <li class="toctree-l3 current"><a class="nav-item current" href="./">Line Chart</a>
+<ul class="subnav"><ul>
+    
+        <li class="toctree-l4"><a class="nav-item toc"  href="#overview">Overview</a></li>
+        
+            <li class="toctree-l5"><a class="nav-item toc"  href="#best-practices">Best Practices</a></li>
+            
+            <li class="toctree-l6"><a class="nav-item toc"  href="#use-case-examples">Use Case Examples</a></li>
+            
+            
+        
+            <li class="toctree-l5"><a class="nav-item toc"  href="#getting-started">Getting Started</a></li>
+            
+            <li class="toctree-l6"><a class="nav-item toc"  href="#data-preparation">Data Preparation</a></li>
+            
+            
+            <li class="toctree-l6"><a class="nav-item toc"  href="#configure-the-line-chart">Configure the Line Chart</a></li>
+            
+            
+            <li class="toctree-l6"><a class="nav-item toc"  href="#definition-of-parameters">Definition of Parameters</a></li>
+            
+            
+        
+    
+    </ul>
+
+    
+</ul></li>
+</ul></li>
+    <li class="toctree-l2"><a class="nav-item" href="../swiper/">Swiper</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../draw/">Draw ToolBar</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../aoi/">Area of Interest</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../coord/">Coordinates Info</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">About</button>
+<ul class="subnav">
+    <li class="toctree-l2">
+<a class="nav-item" href="../../about/">Support</a></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="../../about.fr.md">Soutien</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="previous"><a href="../barchart/">&laquo; Previous</a></div>
+    <div class="next"><a href="../swiper/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> Guidelines for FGP Plugins</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Plugins &raquo; </li><li>Charting</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="overview">Overview</h1>
+<p>A line chart consists of one or more lines connecting successive attribute values. Line graphs are useful for showing how things change or move over time and what the trends in the data may be. Since a line graph uses straight line segments to connect data points, it is easy to determine the data range, minimum and maximum, gaps, clusters, and outliers.</p>
+<p>When the primary categorical variable is continuous in nature, especially if it deals with time, then a useful alternative chart type to consider is the line chart. A line chart is especially useful when there are a lot of levels in the primary categorical variable: the need to cluster many bars around each position can make the chart difficult to read. The line chart cleans this up by aligning each of the sub-groups vertically, and the connected line between points makes it easier to track how each sub-group changes.</p>
+<p><img alt="LineChart" class="chart" src="../../assets/imgs/charts/line1.png" /></p>
+<h2 id="best-practices">Best Practices</h2>
+<p><strong>Tips for interacting with the Line Charts</strong></p>
+<p>To use the Line chart to its best, data must be formatted in a specific way.</p>
+<p><strong>When to use a Line Chart</strong></p>
+<p>Line charts are useful when you want to show the changes in value of a given variable with respect to the changes in some other variable. The other variable is usually time. For example, line charts can be used to show the speed of a vehicle during specific time intervals.
+Multiple lines can also be plotted in a single line chart to compare the trend between series. A common use case for this is to observe the breakdown of the data across different subgroups. The ability to plot multiple lines also provides the line chart a special use case where it might not usually be selected.</p>
+<h3 id="use-case-examples">Use Case Examples</h3>
+<h2 id="getting-started">Getting Started</h2>
+<p>The plugin works with the following mapping services:</p>
+<ul>
+<li>ESRI Feature</li>
+<li>ESRI Dynamic</li>
+</ul>
+<p>More information on Web map services can be found <a href="https://www.nrcan.gc.ca/earth-sciences/geomatics/canadas-spatial-data-infrastructure/8902" target="_blank">here.</a></p>
+<hr />
+<h3 id="data-preparation">Data Preparation</h3>
+<p>To get started we need to ensure that your data is prepared in a format that will work well with the Line Chart.</p>
+<h3 id="configure-the-line-chart">Configure the Line Chart</h3>
+<h3 id="definition-of-parameters">Definition of Parameters</h3>
+<p>To configure this plugin to work with a mapping web service the following parameters are required.</p>
+<table>
+  <tr>
+    <th></th>
+    <th>Parameters</th>
+    <th>Description</th>
+  </tr>
+ <tr>
+    <th rowspan="2">General</th>
+    <td id=parameters>Type</td>
+    <td>Determines the type of chart to be created. This includes pie chart, bar chart or line chart</td>
+  </tr>
+  <tr>
+    <td id=parameters>Title</td>
+    <td>Determines the chart title to be displayed</td>
+  </tr>
+   <tr>
+    <th rowspan="1">Options</th>
+    <td id=parameters>Colors</td>
+    <td>An option to include hexadecimal color values to use to display the chart</td>
+  </tr>
+    <tr>
+    <th rowspan="5">Labels   Axis</th>
+    <td colspan="2" id=parameters>This option is only available when creating the bar and line chart.</td>
+    </tr>
+    <tr>
+    <td id=parameters>Type</td>
+    <td>Determines the type of label to be used. The label names can be retrieved from a field from the layer (linear or time for line chart) or from configuration</td>
+  </tr>
+  <tr>
+    <td id=parameters>Title</td>
+    <td>Determines the title name to be used for the different axis</td>
+  </tr>
+    <tr>
+    <td id=parameters>Values</td>
+    <td>Determines the label names to be used for the charting tool. Depending on the type chosen you can either enter a field name which contains the label names or if the configuration type is chosen values are listed and separated by a semicolon.</td>
+  </tr>
+      <tr>
+    <td id=parameters>Split</td>
+    <td>Determines the special character to use to split the labels</td>
+  </tr>
+   <tr>
+    <th rowspan="3">Layers</th>
+    <td id=parameters>Id</td>
+    <td>Determines which layer the charting plugin with work with as defined in the layer section. *The plugin, for the moment will only work when there is on layer on the moment</td>
+  </tr>
+  <tr>
+    <td id=parameters>Data</td>
+    <td >Determines the different datasets for the layer to use to create the chart
+        <ol type="i">
+            <li id=tablelist>
+            <i>Type</i> - Determines the type of value to be expected. There are two options available to choose from; “Single” or “combine”. If “Single” is used it is expected that there is only one value inside the field. If “combine” is used it is expected that a date and value are part of the field
+            </li>
+            <li id=tablelist>
+            <i>Measure</i> - Determines the field name to be used to create the chart. Note, this must be the field name and not the alias for this to work.
+            </li>
+            <li id=tablelist>
+            <i>Dataset Splitter</i> - Regex expression to split datasets inside the field. this field is to manage when you have multiple datasets or combine values in the same field. To be able to seperate datasets from values a regex expression will be used. It is encouraged to use your data and test your regex expression on an online [site](https://regex101.com/)
+            (e.g. '\\[|\\];\\[|\\]' for '[255;255;255];[120;232;23]'. There is 2 different values [];[]). We strongly recommand using a regex validator with your data to test your expression.
+            </li>
+            <li id=tablelist>
+            <i>Value Splitter</i> - character to use to slit values inside a field (e.g. "val1:val2:val3" will use : as split character)
+            </li>
+            <li id=tablelist>
+            <i>Prefix</i> - Determines the prefix to be added to the data hover.
+            </li>
+            <li id=tablelist>
+            <i>Suffix</i> - Determines the suffix to be added to the data hover.
+            </li>
+        </ol>
+    </td>
+  </tr>
+</table>
+
+<hr /></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../barchart/" title="Bar Chart"><span>Previous</span></a></div>
+        <div class="next"><a href="../swiper/" title="Swiper"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../javascripts/extra.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

@@ -96,6 +96,13 @@ img[class="guide"] {
   margin-left: 40px;
 }
 
+img[class="chart"] {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 img[class="draw_table"] {
   width: 60px;
   height: 60px;

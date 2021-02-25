@@ -44,6 +44,7 @@
 <ul class="subnav">
     <li class="toctree-l2"><a class="nav-item" href="../../guides/fgpauthor/">FGP Author Tool</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../guides/timeseries/">Visualize Temporal Data</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../guides/complexdata/">Visualize Complex Data</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../../guides/comparison/">Enable Layer Comparison</a></li>
 </ul></li>
                     <li class="toctree-l1"><button class="section nav-item">Plugins</button>
@@ -63,22 +64,28 @@
             <li class="toctree-l4"><a class="nav-item toc"  href="#use-case-examples">Use Case Examples</a></li>
             
         
-            <li class="toctree-l4"><a class="nav-item toc"  href="#configure-the-thematic-slider-plugin">Configure the Thematic Slider Plugin</a></li>
-            
-        
             <li class="toctree-l4"><a class="nav-item toc"  href="#getting-started">Getting Started</a></li>
             
             <li class="toctree-l5"><a class="nav-item toc"  href="#data-preparation">Data Preparation</a></li>
             
+            
             <li class="toctree-l5"><a class="nav-item toc"  href="#configure-the-thematic-slider">Configure the Thematic Slider</a></li>
             
+            
             <li class="toctree-l5"><a class="nav-item toc"  href="#definition-of-parameters">Definition of Parameters</a></li>
+            
             
         
     
     </ul>
 
     
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">Charting</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../piechart/">Pie Chart</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../barchart/">Bar Chart</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../linechart/">Line Chart</a></li>
 </ul></li>
     <li class="toctree-l2"><a class="nav-item" href="../swiper/">Swiper</a></li>
     <li class="toctree-l2"><a class="nav-item" href="../draw/">Draw ToolBar</a></li>
@@ -89,12 +96,14 @@
 <ul class="subnav">
     <li class="toctree-l2">
 <a class="nav-item" href="../../about/">Support</a></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="../../about.fr.md">Soutien</a></li>
 </ul></li>
                 </ul>
             </nav>
             <div class="repo">
     <div class="previous"><a href="../rangetimeslider/">&laquo; Previous</a></div>
-    <div class="next"><a href="../swiper/">Next &raquo;</a></div>
+    <div class="next"><a href="../piechart/">Next &raquo;</a></div>
 </div>
         </aside>
         <div id="spacer"><button class="arrow"></button></div>
@@ -170,7 +179,7 @@ For this use case, the thematic slider was used to show cumulative change for ev
 </div>
 <hr />
 <p><br></p>
-<h2 id="configure-the-thematic-slider-plugin">Configure the Thematic Slider Plugin</h2>
+<h2 id="getting-started">Getting Started</h2>
 <p>The plugin works with the following mapping services:</p>
 <ul>
 <li>ESRI Feature</li>
@@ -179,7 +188,6 @@ For this use case, the thematic slider was used to show cumulative change for ev
 </ul>
 <p>More information on Web map services can be found <a href="https://www.nrcan.gc.ca/earth-sciences/geomatics/canadas-spatial-data-infrastructure/8902" target="_blank">here.</a></p>
 <hr />
-<h2 id="getting-started">Getting Started</h2>
 <h3 id="data-preparation">Data Preparation</h3>
 <p>To get started we need to ensure that your data is prepared in a format that will work well with the Thematic Slider plugin.</p>
 <blockquote>
@@ -241,7 +249,7 @@ Set the Animation duration, Title for layer animation, and Description for layer
   </tr>
     <tr>
     <td id=parameters>Stack</td>
-    <td>Determines if only the active layer is shown or if the visibility of all the layers are stacked. Layers are stacked from -Layer 0 to the active layer</td>
+    <td>Determines if only the active layer is shown or if the visibility of all the layers is stacked. Layers are stacked from -Layer 0 to the active layer</td>
   </tr>
   <tr>
     <th rowspan="5">Layers</th>
@@ -250,11 +258,11 @@ Set the Animation duration, Title for layer animation, and Description for layer
   </tr>
   <tr>
     <td id=parameters>Field</td>
-    <td>layer id as define in layer section</td>
+    <td>layer id as define in the layer section</td>
   </tr>
     <tr>
     <td id=parameters>Duration</td>
-    <td>duration in millisecond to stay on the active layer</td>
+    <td>duration in milliseconds to stay on the active layer</td>
   </tr>
     <tr>
     <td id=parameters>Title</td>
@@ -268,7 +276,7 @@ Set the Animation duration, Title for layer animation, and Description for layer
                 <footer>
     <div class="footer-buttons">
         <div class="previous"><a href="../rangetimeslider/" title="Range/Time Slider"><span>Previous</span></a></div>
-        <div class="next"><a href="../swiper/" title="Swiper"><span>Next</span></a></div>
+        <div class="next"><a href="../piechart/" title="Pie Chart"><span>Next</span></a></div>
     </div>
     <div class="footer-note">
         <p>
