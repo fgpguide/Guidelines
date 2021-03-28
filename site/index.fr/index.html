@@ -1,0 +1,574 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.1">
+    
+    
+      
+        <title>Introduction - Guidelines</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Ubuntu";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guide-de-visualisation-des-series-temporelles-pour-la-federal-geospatial-platform-fgp" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Guidelines" class="md-header__button md-logo" aria-label="Guidelines">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guidelines
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Guidelines" class="md-nav__button md-logo" aria-label="Guidelines">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Guidelines
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Introduction
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quest-ce-quune-serie-chronologique-de-donnees" class="md-nav__link">
+    Qu'est-ce qu'une série chronologique de données ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formes-de-visualisation-des-donnees-de-series-chronologiques" class="md-nav__link">
+    Formes de visualisation des données de séries chronologiques
+  </a>
+  
+    <nav class="md-nav" aria-label="Formes de visualisation des données de séries chronologiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#animation-de-la-carte" class="md-nav__link">
+    Animation de la carte
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphiques-de-series-chronologiques" class="md-nav__link">
+    Graphiques de séries chronologiques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#des-cartes-pour-la-detection-des-changements" class="md-nav__link">
+    Des cartes pour la détection des changements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectif-du-present-guide" class="md-nav__link">
+    Objectif du présent guide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-de-ce-guide" class="md-nav__link">
+    Structure de ce guide
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authortool.fr/" class="md-nav__link">
+        Outil de création de FGP 
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chooseplugins.fr/" class="md-nav__link">
+        Choisir le bon plugin
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Configuration des plugins pour la visualisation des séries temporelles
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Configuration des plugins pour la visualisation des séries temporelles" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration des plugins pour la visualisation des séries temporelles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/range.fr/" class="md-nav__link">
+        Curseur de plage
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/thematic.fr/" class="md-nav__link">
+        Curseur de plage thematique
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/charting.fr/" class="md-nav__link">
+        Graphiques
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/swiper.fr/" class="md-nav__link">
+        Gilsseur
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Autres plugins
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Autres plugins" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Autres plugins
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/aoi.fr/" class="md-nav__link">
+        Regions d'interet
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/coord.fr/" class="md-nav__link">
+        Info coordonnees
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/draw.fr/" class="md-nav__link">
+        Barre de dessin
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <ul>
+<li class="i18n-link i18n-link-found i18n-link-en"><a href="../">English</a></li>
+</ul>
+<h1 id="guide-de-visualisation-des-series-temporelles-pour-la-federal-geospatial-platform-fgp">Guide de visualisation des séries temporelles pour la Federal Geospatial Platform (FGP)</h1>
+<h2 id="quest-ce-quune-serie-chronologique-de-donnees">Qu'est-ce qu'une série chronologique de données ?</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Les données de séries chronologiques, en général, font référence à une séquence de données collectées sur des intervalles de temps, ce qui nous permet de suivre les changements dans le temps. </p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Dans le cadre de cette formation, les données de séries temporelles font référence à des séries temporelles dans un contexte spatial (c'est-à-dire des données spatio-temporelles) qui :</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Suivre les changements dans des lieux fixes, tels que les stations de surveillance. </p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Représente des changements variant dans l'espace par le biais d'une série de cartes (par exemple, des cartes de température).</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="formes-de-visualisation-des-donnees-de-series-chronologiques">Formes de visualisation des données de séries chronologiques</h2>
+<p>Les données de séries temporelles dans un contexte spatial peuvent être visualisées sous la forme d'animations cartographiques, de graphiques cartographiques et de cartes pour la détection des changements.</p>
+<h3 id="animation-de-la-carte">Animation de la carte</h3>
+<figure>
+  <iframe id="iframe1" allowfullscreen=true importance = high data-src="https://jolevesq.github.io/contributed-plugins/range-slider/samples/range-slider-index.html?sample=17"></iframe>
+  <figcaption>Figure 1 : Carte montrant la température maximale</figcaption>
+</figure>
+
+<p>L'animation de séries chronologiques est largement utilisée pour visualiser des données de séries chronologiques dans un contexte spatial. La figure 1 est un exemple montrant les variations maximales de température dans le temps à travers le Canada en utilisant le curseur de plage.  Après un clic, l'animation commencera à afficher les variations maximales de température dans l'espace entre 2013 et 2020. De plus amples informations sur la source de données sont disponibles sur le site Web de la Commission européenne <a href="https://gcgeo.gc.ca/geonetwork/metadata/fre/2cf09706-d645-4f73-ad32-095b5330c356" target="_blank">métadonnées</a>.</p>
+<h3 id="graphiques-de-series-chronologiques">Graphiques de séries chronologiques</h3>
+<p><figure>
+  <iframe id="iframe2" allowfullscreen=true importance = high data-src="https://jolevesq.github.io/contributed-plugins/chart/samples/chart-index.html?sample=7"></iframe>
+  <figcaption>Figure 2 : Carte montrant les sites conchylicoles avec des graphiques disponibles par sites en cliquant dessus.</figcaption>
+</figure></p>
+<p>Très souvent, les données de séries chronologiques sont acquises par la surveillance de sites spécifiques (par exemple, une station météorologique). Les graphiques cartographiques sont utilisés pour visualiser les données de surveillance sur des sites spécifiques, qui sont affichés sur une carte. La figure 2 est un exemple de données de séries chronologiques représentées à l'aide de graphiques cartographiques. Les sites de surveillance de la qualité de l'eau pour les sites conchylicoles sont représentés sur la carte. En cliquant sur un site spécifique, l'utilisateur verra un graphique multi-variable montrant les changements dans les valeurs des variables au fil du temps. De plus amples informations sur la source de données sont disponibles sur le site Web de la Commission européenne <a href="https://gcgeo.gc.ca/geonetwork/metadata/fre/6417332a-7f37-49bd-8be9-ce0402deed2a" target="_blank">métadonnées</a>.</p>
+<h3 id="des-cartes-pour-la-detection-des-changements">Des cartes pour la détection des changements</h3>
+<figure>
+  <iframe id="iframe3" allowfullscreen=true importance = high data-src="https://jolevesq.github.io/contributed-plugins/swiper/samples/swiper-index.html?sample=3"></iframe>
+  <figcaption>Figure 3 : Carte montrant la couverture terrestre du Canada (2010 et 2015)</figcaption>
+</figure>
+
+<p>La détection des changements est une autre façon de visualiser les changements pour les données spatio-temporelles. Elle permet à l'utilisateur d'examiner les différences sur une période dans l'espace. La figure 3 illustre cette forme de visualisation pour les changements de la couverture terrestre.  De plus amples informations sur la source de données sont disponibles dans les <a href="https://gcgeo.gc.ca/geonetwork/metadata/fre/e9dee957-e04d-46fb-b7e4-701739736173" target="_blank">métadonnées</a>.</p>
+<h2 id="objectif-du-present-guide">Objectif du présent guide</h2>
+<p>Les données de séries temporelles sont essentielles pour comprendre les dynamiques socio-économiques et environnementales, d'où une composante essentielle des données géospatiales du FGP pour soutenir la politique et la prise de décision. Ces données doivent être correctement visualisées pour permettre aux utilisateurs de comprendre la dynamique. Actuellement, les données de séries chronologiques ne peuvent pas être visualisées efficacement dans les Web Map Services, la norme de l'Open Geospatial Consortium que le FGP utilise pour la visualisation des données. Pour combler cette lacune, l'équipe du FGP a adapté certains outils open-source à l'environnement du FGP sous forme de plugins, notamment le Range Slider, le Thematic Slider, les Charting Tools et le Swiper. Ce guide décrit comment les contributeurs de données FGP peuvent utiliser ces plugins pour configurer des visualisations de séries temporelles basées sur leurs données et les publier dans FGP.</p>
+<h2 id="structure-de-ce-guide">Structure de ce guide</h2>
+<p>Ce guide commence par vous familiariser avec l'outil fondamental par lequel vous utilisez les plugins FGP, à savoir l'outil de création FGP. Il vous fournit ensuite des considérations de haut niveau pour décider quel plugin peut répondre à vos besoins. Chaque plugin fait ensuite l'objet d'une description détaillée de ce qu'il est, quand il est utilisé et comment l'utiliser. Un cas d'utilisation est fourni avec chacun des plugins pour présenter sa fonctionnalité ainsi que le processus étape par étape pour le configurer. Enfin, le processus de publication de vos plugins configurés sur le FGP est décrit. En plus des plugins introduits pour la visualisation des séries temporelles, le FGP a également mis à disposition plusieurs plugins que l'utilisateur final peut utiliser sur l'interface du FGP. Une description de ces plugins complète ce guide.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+      
+        <a href="../authortool.fr/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Outil de création de FGP 
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.tabs.sticky", "navigation.sections"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4e3fea51.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
