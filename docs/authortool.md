@@ -7,6 +7,8 @@ The Authoring Tool’s interface (Figure 4) can be broken up into three areas:
 (2) Configuration panel (middle): parameters for configuring web services. 
 (3) Summary pane (right side):  This section allows the user to validate and preview the configured maps. The summary provides a way to indicate where errors occurred in the configuration setup.
 
+Visit the [FGP Authoring Tool](https://viewer-visualiseur.services.geo.ca/fgpv-vpgf/author-auteur/index-en.html)
+
 <figure>
   <img src="../assets/en/fgpauthor/fig1.png"/>
   <figcaption>Figure 4: Authoring Tool Interface</figcaption>

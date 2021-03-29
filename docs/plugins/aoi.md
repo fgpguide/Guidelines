@@ -50,5 +50,5 @@ Provide a subsequent <emp>English Title</emp> and <emp>French Title</emp> that d
 ## Preview plugin
 
 <figure>
-  <iframe id="iframe1" allowfullscreen=true importance = high data-src="https://negice.github.io/usecase/aoi/samples/aoi-index1.html"></iframe>
+  <iframe id="iframe1" allowfullscreen=true importance = high data-src="https://fgpguide.github.io/plugins/aoi/samples/aoi.html"></iframe>
 </figure>

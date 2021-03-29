@@ -22,6 +22,8 @@ nav:
     - Coordinates Info Plugin: ./plugins/coord.fr.md
     - Draw Toolbar: ./plugins/draw.md
     - Draw Toolbar: ./plugins/draw.fr.md
+  - Resources: resources.md
+  - Resources: resources.fr.md
 
 theme:
   name: material
@@ -65,3 +67,4 @@ plugins:
           Area of Interest: Regions d'interet
           Coordinates Info Plugin: Info coordonnees
           Draw Toolbar: Barre de dessin
+          Resources: Ressources

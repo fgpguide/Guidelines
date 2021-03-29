@@ -42,5 +42,5 @@ Navigate to the <emp>Plugins</emp> section in the FGP Authoring Tool. Under the 
 ## Preview plugin
 
 <figure>
-  <iframe id="iframe1" allowfullscreen=true importance = high data-src="https://negice.github.io/usecase/coord/samples/coord-index.html"></iframe>
+  <iframe id="iframe1" allowfullscreen=true importance = high data-src="https://fgpguide.github.io/plugins/coord/samples/coord-index.html"></iframe>
 </figure>

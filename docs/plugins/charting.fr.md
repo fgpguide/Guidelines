@@ -97,7 +97,7 @@ This method is not recommended because it requires a structured workflow to conc
 
 ## Configuring the Line Chart
 
-Before you begin, Ensure that all Layers to be used should be configured in Authoring tool under the <emp>Map Tab</emp>. [(See Section: Using the Authoring Tool to Configure a Plugin – Adding a new layer)](/authortool/#adding-a-new-layer)
+Before you begin, Ensure that all Layers to be used should be configured in Authoring tool under the <emp>Map Tab</emp>. [(See Section: Using the Authoring Tool to Configure a Plugin – Adding a new layer)](/)
 
 **<u>Step 1. Enable Charting plugin.</u>**
 
