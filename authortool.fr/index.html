@@ -1,0 +1,643 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.1">
+    
+    
+      
+        <title>Outil de création de FGP - Guidelines</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Ubuntu";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fgp-authoring-tool-interface-to-fgp-plugins" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Guidelines" class="md-header__button md-logo" aria-label="Guidelines">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guidelines
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Outil de création de FGP 
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Guidelines" class="md-nav__button md-logo" aria-label="Guidelines">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Guidelines
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.fr/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Outil de création de FGP 
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Outil de création de FGP 
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-authoring-tool" class="md-nav__link">
+    What is the Authoring Tool?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-authoring-tool-to-configure-a-plugin-a-use-case" class="md-nav__link">
+    Using the Authoring Tool to Configure a Plugin– A Use Case
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Authoring Tool to Configure a Plugin– A Use Case">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-layer" class="md-nav__link">
+    Adding a new layer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-plugins" class="md-nav__link">
+    Enable Plugins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-and-integration" class="md-nav__link">
+    Validation and Integration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author-and-support" class="md-nav__link">
+    Author and Support
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chooseplugins.fr/" class="md-nav__link">
+        Choisir le bon plugin
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Configuration des plugins pour la visualisation des séries temporelles
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Configuration des plugins pour la visualisation des séries temporelles" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration des plugins pour la visualisation des séries temporelles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/range.fr/" class="md-nav__link">
+        Curseur de plage
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/thematic.fr/" class="md-nav__link">
+        Curseur de plage thematique
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/charting.fr/" class="md-nav__link">
+        Graphiques
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/swiper.fr/" class="md-nav__link">
+        Gilsseur
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Autres plugins
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Autres plugins" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Autres plugins
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/aoi.fr/" class="md-nav__link">
+        Regions d'interet
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/coord.fr/" class="md-nav__link">
+        Info coordonnees
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/draw.fr/" class="md-nav__link">
+        Barre de dessin
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources.fr/" class="md-nav__link">
+        Ressources
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <ul>
+<li class="i18n-link i18n-link-found i18n-link-en"><a href="../authortool/">English</a></li>
+</ul>
+<h1 id="fgp-authoring-tool-interface-to-fgp-plugins">FGP Authoring Tool – Interface to FGP Plugins:</h1>
+<h2 id="what-is-the-authoring-tool">What is the Authoring Tool?</h2>
+<p>The FGP Authoring Tool is a Web application that provides you with a friendly environment where you can easily enable a plugin, access the Web map service(s) as input to the plugin, configure the plugin seamlessly, and test and validate the configuration file.  <br />
+The Authoring Tool’s interface (Figure 4) can be broken up into three areas:
+(1) Navigation pane (left side) allows the user to move between the different elements of the web application. 
+(2) Configuration panel (middle): parameters for configuring web services. 
+(3) Summary pane (right side):  This section allows the user to validate and preview the configured maps. The summary provides a way to indicate where errors occurred in the configuration setup.</p>
+<p>Visit the <a href="https://viewer-visualiseur.services.geo.ca/fgpv-vpgf/author-auteur/index-fr.html">FGP Authoring Tool</a></p>
+<figure>
+  <img src="../assets/en/fgpauthor/fig1.png"/>
+  <figcaption>Figure 4: Authoring Tool Interface</figcaption>
+</figure>
+
+<h2 id="using-the-authoring-tool-to-configure-a-plugin-a-use-case">Using the Authoring Tool to Configure a Plugin– A Use Case</h2>
+<p>The workflow starts with Adding A New Layer (or called Testing), followed by Enable A plugin, and completed by Validation and Integration (Figure 5).</p>
+<figure>
+  <img src="../assets/en/fgpauthor/fig2.png"/>
+  <figcaption>Figure 5: Authoring Tool - Workflow</figcaption>
+</figure>
+
+<h3 id="adding-a-new-layer">Adding a new layer</h3>
+<p><strong><u>Step 1.</u></strong> From the <emp>Navigation</emp> pane, select the <emp>Map tab</emp>.</p>
+<p><strong><u>Step 2.</u></strong> Select the <emp>“Layers”</emp> tab from the options and click on the <emp>Add</emp> button to be able to add layers to the viewer (Figure 6).</p>
+<figure>
+  <img src="../assets/en/fgpauthor/fig3.png"/>
+  <figcaption>Figure 6: Authoring Tool - Add New Layer</figcaption>
+</figure>
+
+<p><strong><u>Step 3.</u></strong> Select the <emp>type</emp> of map service that will be loaded. There are several options to choose from. Identify the best option that matches the type of map service that relates to what is published.</p>
+<p><strong><u>Step 4.</u></strong> Provide a <emp>name</emp> that will be displayed for the layer. If it is not present the viewer will attempt to scrape this information from the map service (Figure 7).</p>
+<figure>
+  <img src="../assets/en/fgpauthor/fig4.png"/>
+  <figcaption>Figure 7: Authoring Tool - Configure Layer</figcaption>
+</figure>
+
+<p><strong><u>Step 5.</u></strong> Provide the <emp>URL</emp> of the map service. This is the service endpoint of the layer. It should match the type provided in the layer type.</p>
+<p>Extra Steps: Some layer types require extra inputs to be completed before they will load.</p>
+<p><emp>Esri Dynamic</emp></p>
+<p><strong><u>Step 5a.</u></strong> Click on the <emp>Add</emp> button under <emp>Layer Entries</emp>. This will open another section where the <emp>“Index”</emp> of the layer can be entered. The <emp>"Index”</emp> of the layer references the ID of the map service. Take for example this layer (Location of mill facilities), the ID of this layer is <emp>0</emp> which corresponds to the <emp>Index</emp> (Figure 8).</p>
+<figure>
+  <img src="../assets/en/fgpauthor/fig5.png"/>
+  <figcaption>Figure 8: Example Map Service End Point – Location of mill facilities</figcaption>
+</figure>
+
+<p><strong><u>Step 5b.</u></strong> Optionally, a descriptive name for the layer under the <emp>Name</emp> field can be entered. However, doing so will override the name coming from the service.</p>
+<p><emp>OGC WMS</emp></p>
+<p><strong><u>Step 5a.</u></strong> Click on the Add button under Layer Entries (Figure 9). This will open another section where the <emp>“ID”</emp> of the later entry in the WMS can be inputted (Figure 10). This is the value between the <emp><Name> …. </Name></emp> tag of the layer. Optionally, a descriptive name for the layer under the <emp>Name</emp> field can be entered. However, doing so will override the name coming from the service.</p>
+<figure>
+  <img src="../assets/en/fgpauthor/fig6.png"/>
+  <figcaption>Figure 9: Authoring Tool - Add Layer (OGC WMS)</figcaption>
+</figure>
+
+<figure>
+  <img src="../assets/en/fgpauthor/fig7.png"/>
+  <figcaption>Figure 10: Authoring Tool - Add Layer (OGC WMS) cont.</figcaption>
+</figure>
+
+<p><strong><u>Step 5b.</u></strong> <emp>OGC WMS</emp> also includes options to include <emp>“Feature info MIME type”</emp> and <emp>“Legend MIME type”</emp> (Figure 9). The <emp>“Feature info MIME type”</emp> indicates the format that should be requested from the <emp>WMS</emp> map service. The <emp>“Legend MIME type”</emp> indicates the format of the Legend that should be requested from the <emp>WMS</emp> map service.</p>
+<p><strong><u>Step 6.</u></strong> Navigate to the <emp>“Validate”</emp> and <emp>“Preview”</emp> button on the Summary pane. Pressing on the <emp>Validate</emp> button will ensure that all parameters are checked and meet requirements for reviewing.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>As many layers can be added as required.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if any issues are identified, the section with the error will be automatically highlighted in the Summary Pane.</p>
+</div>
+<h3 id="enable-plugins">Enable Plugins</h3>
+<p>Now that the layers are loaded and verified to be working properly.</p>
+<p>Navigate to the <emp>Plugins</emp> tab. This is found at the bottom of the Navigation (left) pane (Figure 11).</p>
+<p>The <emp>Plugins</emp> tab presents all the available plugins for time series data as well as other optional plugins. Each plugin has specific parameters which are required to be configured to successfully work with the data (see next section for the details).</p>
+<figure>
+  <img src="../assets/en/fgpauthor/fig8.png"/>
+  <figcaption>Figure 11: Authoring Tool - Enable plugins</figcaption>
+</figure>
+
+<h3 id="validation-and-integration">Validation and Integration</h3>
+<p>Final step: validate and preview to make sure everything works as it should (Figure 12).</p>
+<figure>
+  <img src="../assets/en/fgpauthor/fig9.png"/>
+  <figcaption>Figure 12: Authoring Tool - Summary pane</figcaption>
+</figure>
+
+<p>After completing the workflow and validation is successful, a .json configuration file can be generated and saved (Figure 13). This configuration file can be later uploaded back to the FGP Authoring tool if changes are required.</p>
+<figure>
+  <img src="../assets/en/fgpauthor/fig10.png"/>
+  <figcaption>Figure 13: Authoring Tool - Save and Upload</figcaption>
+</figure>
+
+<h3 id="author-and-support">Author and Support</h3>
+<p>The Author and maintainer for FGP plugins and the Authoring tool is Johann Levesque, FGP, NRCan. To report an issue, please create an issue from the GitHub repository. Add the plugin label and any other applicable information. <a href="https://github.com/fgpv-vpgf/contributed-plugins/issues" target="_blank">GitHub Repository</a>.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../index.fr/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Introduction
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../chooseplugins.fr/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Choisir le bon plugin
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.tabs.sticky", "navigation.sections"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4e3fea51.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,862 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.1">
+    
+    
+      
+        <title>Charting Tools - Guidelines</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Ubuntu";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#charting-tools" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Guidelines" class="md-header__button md-logo" aria-label="Guidelines">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guidelines
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Charting Tools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Guidelines" class="md-nav__button md-logo" aria-label="Guidelines">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Guidelines
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../authortool/" class="md-nav__link">
+        FGP Authoring Tool
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chooseplugins/" class="md-nav__link">
+        Choosing The Right Plugin
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Configuring Plugins for Time-Series Visualization
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Configuring Plugins for Time-Series Visualization" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Configuring Plugins for Time-Series Visualization
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../range/" class="md-nav__link">
+        Range Slider
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thematic/" class="md-nav__link">
+        Thematic Slider
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Charting Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Charting Tools
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-charting-tool" class="md-nav__link">
+    What is the Charting Tool?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-it" class="md-nav__link">
+    When to use it?
+  </a>
+  
+    <nav class="md-nav" aria-label="When to use it?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#line-chart" class="md-nav__link">
+    Line Chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bar-chart" class="md-nav__link">
+    Bar Chart
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-it-a-use-case" class="md-nav__link">
+    How to use it - A use case
+  </a>
+  
+    <nav class="md-nav" aria-label="How to use it - A use case">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparing-the-data" class="md-nav__link">
+    Preparing the Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-structure" class="md-nav__link">
+    Data Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1" class="md-nav__link">
+    Option 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2" class="md-nav__link">
+    Option 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-3" class="md-nav__link">
+    Option 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-line-chart" class="md-nav__link">
+    Configuring the Line Chart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition-of-parameters" class="md-nav__link">
+    Definition of parameters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../swiper/" class="md-nav__link">
+        Swiper
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Other Plugins
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Other Plugins" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Other Plugins
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aoi/" class="md-nav__link">
+        Area of Interest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coord/" class="md-nav__link">
+        Coordinates Info Plugin
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../draw/" class="md-nav__link">
+        Draw Toolbar
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <ul>
+<li class="i18n-link i18n-link-found i18n-link-fr"><a href="../../plugins/charting.fr/">en français</a></li>
+</ul>
+<h1 id="charting-tools">Charting Tools</h1>
+<h2 id="what-is-the-charting-tool">What is the Charting Tool?</h2>
+<p>The Chart plugin provides a map-based charting tool that enables the visualization of one of the most common time series data in a spatial context, i.e. time series monitoring data available on specific sites such as weather stations, or in fixed regions such as watersheds. With the distribution of the sites or regions represented as a map service, the Charting Tool enables the creation of a Line Chart or Bar Chart for the time series data by sites/regions. This time series dataset may contain more than one variable, which can be charted accordingly by both the Line and Bar Chart.</p>
+<figure>
+  <img src="../../assets/en/charts/fig1.png"/>
+  <figcaption>Figure 32: a) Line Chart showing the concentration of Fecal Coliforms per 100 ml samples over time for a shellfish site selected from the shellfish monitoring map; b) map showing shellfish monitoring sites.</figcaption>
+</figure>
+
+<p>Figure 32 shows an example of map-based charts for time series visualization. The Line Chart shows data collected for one of the shellfish sites under monitoring across Canada. By clicking a monitoring site on the Shellfish Monitoring Map below, the user will see the Chart pop up.  The sliders for the X and Y Axis allow the user to filter results to show specific value ranges or time ranges respectively. More information on the data source can be found from the metadata.</p>
+<figure>
+  <img src="../../assets/en/charts/fig2.png"/>
+  <figcaption>Figure 33: a) Bar Chart showing the sample results in 2013, 2015 and 2016 for four parameters on one of the Independent Environmental Monitoring Stations in Canada by Canadian Nuclear Safety Commission; b) Map representing the distribution of the monitor stations.</figcaption>
+</figure>
+
+<p>An example of a Bar chart is provided in Figure 33 representing data collected from one of the Independent Environmental Monitoring Stations. The data verify that the public and environment around CNSC-regulated nuclear facilities are not adversely affected by releases to the environment. More information on the data source can be found from the metadata.</p>
+<p>In addition, the Charting plugin supports Pie Chart, which may be used to visualize non-time series data.</p>
+<h2 id="when-to-use-it">When to use it?</h2>
+<h3 id="line-chart">Line Chart</h3>
+<p>If you have a map service created to represent monitoring sites or fixed regions and if time series data is available over each site or region, the Line Chart is the preferred choice for visualizing the time series data for several reasons:</p>
+<ul>
+<li>The advantage of showing trends of change, which is often of central interest for monitoring;</li>
+<li>The ability to show a long series of observations;</li>
+<li>The capacity to include a good number of lines each corresponding to a variable; and</li>
+<li>The capability to show the trend of a variable in comparison with that of other variables.</li>
+</ul>
+<figure>
+  <img src="../../assets/en/charts/fig3.png"/>
+  <figcaption>Figure 34: Line Chart showing concentration of Fecal Coliforms per 100 ml  on a monitoring site; underneath the Chart is the map showing shellfish monitoring sites across Canada</figcaption>
+</figure>
+
+<p>In this example Figure 34, the Line Chart was used to visualize the time series data from data collected from Shellfish Sites. The data is dynamically represented in a rendered line chart where the user can use the onscreen slider to dynamically manipulate the data. The Line Chart supports a slider to filter results by the date or by the results.</p>
+<h3 id="bar-chart">Bar Chart</h3>
+<p>The Bar Chart is preferred to Line Chart when the site/region-based time series data has sparse observations, for example, three observations or even less. A Bar Chart in this case can be used with each observation represented by a bar, and successive bars to show the changes over time.</p>
+<figure>
+  <img src="../../assets/en/charts/fig4.png"/>
+  <figcaption>Figure 35: Bar Chart for a monitoring station, popped up when the user clicks on a monitoring station of the Independent Environmental Monitoring Stations map (underneath the Bar Chart).</figcaption>
+</figure>
+
+<p>In this use case (Figure 35), the map-based bar chart tool was used to visualize the Independent Environmental Monitoring Station time series data. The collected parameters was used along the x-axis while the y-axis represents the collected sample results. The year of data collection was used as the variables (i.e. 2013, 2015, 2016). Bar Chart was preferred to Line Chart for visualization of this dataset due to the limited timestamps available.  More information on this dataset can be found in the metadata.</p>
+<h2 id="how-to-use-it-a-use-case">How to use it - A use case</h2>
+<p>Using the Shellfish Monitoring data for a use case, we illustrate how to use the Charting plugin to create map-based Line Charts. This dataset provides marine bacteriological water quality observations for bivalve shellfish harvest areas in Canada (British Columbia, New Brunswick, Newfoundland, Nova Scotia, Prince Edward Island and Quebec).</p>
+<h3 id="preparing-the-data">Preparing the Data</h3>
+<p><strong>Linked Tables</strong></p>
+<p>Linked Tables refers to using two or more tables that share the same field. This data structure establishes a relationship between the datasets through which a single table containing all the parameters and values is related to the reference data. In the use case example, Shellfish Water Classification Program, the data structure of this dataset reveals that relationship tables are used. The layer <emp>“Marine Water Quality Data”</emp> is linked to the <emp>“Samples_Echantillons_National”</emp> table by the “Site” field (Figure 36). Starting from the layer, the Charting plugin is automatically directed to access this related table and pulls the required time series data to generate the appropriate chart.</p>
+<figure>
+  <img src="../../assets/en/charts/fig5.png"/>
+  <figcaption>Figure 36: Shellfish Water Classification Program map service endpoint showing layers, linked tables and relationship tables data structure</figcaption>
+</figure>
+
+<h3 id="data-structure">Data Structure</h3>
+<p>Data structure here refers to the organization of the data file for use by the Chart plugin. It takes into consideration linked tables and efficient access and modifications of data.  The Charting plugin supports three options of data structure.  </p>
+<h4 id="option-1">Option 1</h4>
+<p>Following the same structure as the use case example (Figure 36), the data can be organized using linked tables. The map service has the layer <emp>“Marine Water Quality Data”</emp> is linked to the <emp>“Samples_Echantillons_National”</emp> table by the <emp>“Site”</emp> field (Figure 37). It can be seen that the <emp>“Site”</emp> name serves as the unique identifier linking the layer and the table, and the bracketed numbers in Figure 37 (b) refer to the number of observations on each monitoring site. The <emp>“Date”</emp> field contains the date of the observations and the <emp>“FC_MPN_CF_NPP_100_mL”</emp> field has the recorded values.</p>
+<figure>
+  <img src="../../assets/en/charts/fig6.png"/>
+  <figcaption>Figure 37: Data structure for Option 1 – a) Layer table with references to linked table highlighted, b) Linked table with reference to layer table and time series data highlighted</figcaption>
+</figure>
+
+<h4 id="option-2">Option 2</h4>
+<p>Where a large number of parameters are observed on a site, you may use Option 2 to organize your data for use by the Charting plugin. Similar to option 1, the data is mapped as a layer and linked to a table that holds the records of time series observations (Figure 38 (a)). The difference from the previous use case is that there is a large number of parameters being observed, as shown in Tested substances of Figure 38 (b). In this case, the time series data can be organized in a manner to avoid making the linked table too wide.  </p>
+<p>As shown in Figure 38 (b), there is now one field that lists all the parameters <emp>[“VARIABLE_NAME”]</emp>, a field that lists the corresponding data value <emp>[VALUE_VALEUR]</emp>, a field that lists the corresponding dates <emp>[DATE]</emp> and likewise the units of the values <emp>[UNIT_UNITE]</emp>.  The table starts with listing all the parameters with dates and monitoring sites repeating, then all the dates of observations with monitoring sites repeating, and finally all the monitoring sites.</p>
+<figure>
+  <img src="../../assets/en/charts/fig7.png"/>
+  <figcaption>Figure 38: Data Structure Option 2 – a) Layer table with references to linked table highlighted, b) Linked table with reference to layer table and time series data highlighted</figcaption>
+</figure>
+
+<h4 id="option-3">Option 3</h4>
+<p>Organizing the time series data where fields are created by concatenating the data into one field as inline text. This structure requires that the data be formatted in a specific way. Each field to be charted is required to have the data listed and separated using parenthesis and commas. (Figure 39). If your data is not already in this format, this data structure will require a detailed workflow to get the data in this format. </p>
+<p>This method is not recommended because it requires a structured workflow to concatenate the data in a new field to meet the requirements. Each parameter observed would require a new field to be created. However, if there are constraints in the data which require and suits this data structure it is available to be used for charting.</p>
+<figure>
+  <img src="../../assets/en/charts/fig8.png"/>
+  <figcaption>Figure 39: Data structure for Option 3</figcaption>
+</figure>
+
+<h2 id="configuring-the-line-chart">Configuring the Line Chart</h2>
+<p>Before you begin, Ensure that all Layers to be used should be configured in Authoring tool under the <emp>Map Tab</emp>. <a href="/authortool/#adding-a-new-layer">(See Section: Using the Authoring Tool to Configure a Plugin – Adding a new layer)</a></p>
+<p><strong><u>Step 1. Enable Charting plugin.</u></strong></p>
+<p>Navigate to the <emp>Plugins</emp> section in the FGP Authoring Tool.
+Under the <emp>Charts tab</emp>, click on <emp>Enable</emp>.</p>
+<figure>
+  <img src="../../assets/en/charts/fig9.png"/>
+  <figcaption>Figure 40: Line Chart - Enable</figcaption>
+</figure>
+
+<p><strong><u>Step 2. Define Axis Labels</u></strong></p>
+<ol>
+<li>
+<p>Choose the <emp>“Type”</emp> and set the Title for the X-Axis.
+Under the <emp>“Type”</emp>, choose the option that best suits the intended use case.</p>
+<ol>
+<li>
+<p><emp>Date</emp> – If set, the expected format of the date data would be in the form of Year-Month-Day or follow a similar convention. (e.g., YYYY-MM-DD; DD-MM-YYYY)</p>
+</li>
+<li>
+<p><emp>Linear</emp> – If set, the expected format of the date data would be linear (e.g., YYYY)</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>In the use case example, the <emp>“Type”</emp> is set to Date (Figure 41).</p>
+<ol>
+<li>Set the <emp>“Type”</emp> and Title for the Y-Axis
+Under the <emp>“Type”</emp> the only option available is Linear (Figure 41).</li>
+</ol>
+<figure>
+  <img src="../../assets/en/charts/fig10.png"/>
+  <figcaption>Figure 41: Line Chart - Axis Labels</figcaption>
+</figure>
+
+<p><strong>&lt;&gt;Step 3. Select Layer</u></strong></p>
+<ol>
+<li>
+<p><emp>Layer ID</emp> - Under the <emp>Layer Id</emp>, select the layer with which the plugin will work. The <emp>layer Id</emp> is automatically generated when adding a map service to the Authoring Tool. Each layer will have a unique Id generated. Ensure that the layer to be used is being selected. In the use case, this layer is <emp>“Shellfish Sites”</emp> (Figure 42).</p>
+</li>
+<li>
+<p><emp>Name Field</emp> – Choose a corresponding field to be used to identify with the generated Charting visualization. In the use case, the <emp>“Site”</emp> field was used to identify what site data is being displayed.</p>
+</li>
+<li>
+<p><emp>Chart Data Type</emp> – Choose the best option that relates to the data structure used for the dataset. In the use case, Link was used because the data structure uses Linked Tables.</p>
+</li>
+<li>
+<p><emp>Link URL</emp> – If the link is set as the <emp>Chart Data Type</emp>, provide the URL link of the linked table. This can be found on the map service page. In the use case, the URL link for the Linked table was provided.</p>
+</li>
+<li>
+<p><emp>Link Field</emp> – If Link is set as the <emp>Chart Data Type</emp>, provide the common field used for the relationship between the tables. In the use case, the <emp>“Site”</emp> field was the relationship field</p>
+</li>
+</ol>
+<figure>
+  <img src="../../assets/en/charts/fig11.png"/>
+  <figcaption>Figure 42: Line Chart – Layers</figcaption>
+</figure>
+
+<p><strong><u>Step 4. Configure Data Parameters (Figure 43)</u></strong></p>
+<ol>
+<li>
+<p><emp>Type of Link</emp> – Choose the type that reflects how the data is structured.</p>
+<ol>
+<li><emp>Single</emp> – Choose this If the data structure of your data follows Option 1 (see Preparing data), i.e.  the names of parameters being observed are shown only at the top of the linked table. This is the case for the Shellfish use case.  See Preparing the data - Option 1 for more details. </li>
+<li><emp>Multi</emp> – Select this If Option 2 applies to your data, i.e., there is one field of the linked table having parameter names as the values. one field with the date and one field with the results. See Preparing the data – Option 2.</li>
+</ol>
+</li>
+<li>
+<p><emp>Link Field</emp> – Provide the name of the field that links the layer and the linked table</p>
+</li>
+<li>
+<p><emp>Date Field</emp> – Provide the field name that corresponds to the <emp>“Date”</emp> field of the linked table. In the use case, this field name was <emp>“Date”</emp>.</p>
+</li>
+<li>
+<p><emp>Label Values</emp> – If the <emp>“Type of Link”</emp> was set to multi, provide the field name that corresponds to the units of measure. Otherwise, this remains empty. In the use case, this was left empty because the <emp>“Type of Link”</emp> was set to <emp>“Single”</emp></p>
+</li>
+<li>
+<p><emp>Measure Field</emp> – Provide the field name that corresponds to the data to be displayed by the Chart. In the use case, the field name used was <emp>”FC_MPN_CF_NPP_100_mL”</emp>. Note that the exact field name must be used. </p>
+</li>
+<li>
+<p><emp>Prefix</emp> – If required, provide a prefix to be displayed when the user hovers over the data. In this use case, when the user hovers the mouse over the chart data, <emp>“Concentration”</emp> will be used as the prefix before displaying the value.</p>
+</li>
+<li>
+<p><emp>Suffix</emp> - If required, provide a suffix to be displayed when the user hovers over the data. In this use case, when the user hovers the mouse over the chart data, <emp>“by 100 / ml”</emp> will be used as the suffix after displaying the value.</p>
+</li>
+</ol>
+<p><strong>Optional</strong>, if more data Fields are required to be displayed, click on the <emp>Add</emp> button (Figure 43) to add a new data parameter and repeat the steps to configure.</p>
+<figure>
+  <img src="../../assets/en/charts/fig12.png"/>
+  <figcaption>Figure 43: Line Chart – Data</figcaption>
+</figure>
+
+<p><strong><u>Step 5. Details Option</u></strong></p>
+<p>Optionally (Figure 44), under the <emp>“Details”</emp> parameter, the details panel can be customized. Using the markdown notation, it is possible to provide customized additional information in the details panel. An example can be found here</p>
+<figure>
+  <img src="../../assets/en/charts/fig13.png"/>
+  <figcaption>Figure 44: Line Chart - Custom Details Parameter</figcaption>
+</figure>
+
+<h2 id="definition-of-parameters">Definition of parameters</h2>
+<p>Listed in the following table are the definitions of all the parameters available when using the FGP Authoring Tool to configure the Charting plugin.</p>
+<table>
+  <tr>
+    <th></th>
+    <th>Parameters</th>
+    <th>Description</th>
+  </tr>
+ <tr>
+    <th rowspan="2">General</th>
+    <td id=parameters>Type</td>
+    <td>Determines the type of chart to be created. This includes a pie chart, bar chart or line chart</td>
+  </tr>
+  <tr>
+    <td id=parameters>Title</td>
+    <td>Determines the chart title to be displayed</td>
+  </tr>
+   <tr>
+    <th rowspan="1">Options</th>
+    <td id=parameters>Datasets Colors</td>
+    <td>An option to include hexadecimal color values to use to display the chart</td>
+  </tr>
+   <tr>
+    <th rowspan="2">Label Axis</th>
+    <td id=parameters>Type</td>
+    <td>Determines the type of label to be used. The label names can be retrieved from a field from the layer (Linear or Date for line chart) or configuration. (Linear or Date) for the line chart.</td>
+  </tr>
+  <tr>
+    <td id=parameters>Title</td>
+    <td>Determines the title name to be used for the different axis</td>
+  </tr>
+  <tr>
+    <th rowspan="6">Layers</th>
+    <td id=parameters>Id</td>
+    <td>Determines the layer id as defined in the layer section.</td>
+  </tr>
+  <tr>
+    <td id=parameters>Name Field</td>
+    <td>Determines the field used to identify the data being displayed by the chart.</td>
+  </tr>
+    <tr>
+    <td id=parameters>Chart Data Type</td>
+    <td>Determines the type of data to be expected by the Charting plugin (Inline, Link).
+    <ol type="i">
+     <li id=tablelist>Inline – Data structure using Inline Text. See Preparing data for more information</li>
+     <li id=tablelist>Link – Data is structured using Linked Tables. See Preparing data for more information</li>
+    </ol>
+</td>
+  </tr>
+    <tr>
+    <td id=parameters>Link URL</td>
+    <td>Determines the URL for the linked Table. This is only required if the “Chart Data Type” is set to “Link”</td>
+  </tr>
+    <tr>
+    <td id=parameters>Link Field</td>
+    <td>Determines the field name that links the layer to the data table. This is only required if the “Chart Data Type” is set to “Link”</td>
+  </tr>
+      <tr>
+    <td id=parameters>Data</td>
+    <td>Determines the different parameters for the layer to use to create the chart
+     <ol type="i">
+          <li id=tablelist>Type of Link – Determines the type of data structure to expect. This is based on how the data is structured inside the link table
+          <ol type="a">
+                    <li id=tablelist>Single – For option 1. See Preparing your data for more information
+                    <li id=tablelist>Multi – For option 2. See Preparing your data for more information
+          </ol>
+          </li>
+          <li id=tablelist>Link Field – Determines the field used to link the relationship between layer and table.</li>
+          <li id=tablelist>Date Field – Determines the field used for time series dates.</li>
+          <li id=tablelist>Label Values – Determines the field corresponding to the unit labels for the parameters if available..</li>
+          <li id=tablelist>Measure Field – Determines the field corresponding to the time series collected results to create the chart. Note the field name must be used and not the field alias.</li>
+          <li id=tablelist>Prefix – Determines the prefix to be added to the data hover</li>
+          <li id=tablelist>Suffix – Determines the suffix to be added to the data hover</li>
+        </ol>
+  </tr>
+     <tr>
+    <th rowspan="1"></th>
+    <td id=parameters>Details</td>
+    <td>Specifies if the details panel should be customized. Custom details can be included using the markdown notation.</td>
+  </tr>
+</table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../thematic/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Thematic Slider
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../swiper/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Swiper
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.tabs.sticky", "navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e3fea51.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
