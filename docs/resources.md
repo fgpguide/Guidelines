@@ -28,7 +28,7 @@ Here you can find the .json configuration files for the examples in this doccume
 
 Here you can find usecase samples created for the all the plugins.
 
-<a href="https://viewer-visualiseur.services.geo.ca/fgpv-vpgf/author-auteur/index-en.html" download target="_blank">Fgp Authoriung Tool</a>
+<a href="https://viewer-visualiseur-stage.services.geo.ca/fgpv-vpgf/author-auteur/index-en.html" download target="_blank">Fgp Authoriung Tool</a>
 
 <a href="https://jolevesq.github.io/contributed-plugins/range-slider/samples/range-slider-index.html?sample=17" download target="_blank">Range Slider</a>
 
