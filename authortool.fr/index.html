@@ -483,14 +483,14 @@ The Authoring Tool’s interface (Figure 4) can be broken up into three areas:
 (3) Summary pane (right side):  This section allows the user to validate and preview the configured maps. The summary provides a way to indicate where errors occurred in the configuration setup.</p>
 <p>Visit the <a href="https://viewer-visualiseur.services.geo.ca/fgpv-vpgf/author-auteur/index-fr.html">FGP Authoring Tool</a></p>
 <figure>
-  <img src="../assets/fr/fgpauthor/author1.png"/>
+  <img src="../assets/fr/fgpauthor/fig1.png"/>
   <figcaption>Figure 4: Interface de l'outil de création</figcaption>
 </figure>
 
 <h2 id="using-the-authoring-tool-to-configure-a-plugin-a-use-case">Using the Authoring Tool to Configure a Plugin– A Use Case</h2>
 <p>The workflow starts with Adding A New Layer (or called Testing), followed by Enable A plugin, and completed by Validation and Integration (Figure 5).</p>
 <figure>
-  <img src="../assets/fr/fgpauthor/author2.png"/>
+  <img src="../assets/fr/fgpauthor/fig2.png"/>
   <figcaption>Figure 5: L'outil de création - Flux de travail</figcaption>
 </figure>
 
@@ -498,14 +498,14 @@ The Authoring Tool’s interface (Figure 4) can be broken up into three areas:
 <p><strong><u>Step 1.</u></strong> From the <emp>Navigation</emp> pane, select the <emp>Map tab</emp>.</p>
 <p><strong><u>Step 2.</u></strong> Select the <emp>“Layers”</emp> tab from the options and click on the <emp>Add</emp> button to be able to add layers to the viewer (Figure 6).</p>
 <figure>
-  <img src="../assets/en/fgpauthor/fig3.png"/>
+  <img src="../assets/fr/fgpauthor/fig3.png"/>
   <figcaption>Figure 6: Authoring Tool - Add New Layer</figcaption>
 </figure>
 
 <p><strong><u>Step 3.</u></strong> Select the <emp>type</emp> of map service that will be loaded. There are several options to choose from. Identify the best option that matches the type of map service that relates to what is published.</p>
 <p><strong><u>Step 4.</u></strong> Provide a <emp>name</emp> that will be displayed for the layer. If it is not present the viewer will attempt to scrape this information from the map service (Figure 7).</p>
 <figure>
-  <img src="../assets/en/fgpauthor/fig4.png"/>
+  <img src="../assets/fr/fgpauthor/fig4.png"/>
   <figcaption>Figure 7: Authoring Tool - Configure Layer</figcaption>
 </figure>
 
@@ -514,7 +514,7 @@ The Authoring Tool’s interface (Figure 4) can be broken up into three areas:
 <p><emp>Esri Dynamic</emp></p>
 <p><strong><u>Step 5a.</u></strong> Click on the <emp>Add</emp> button under <emp>Layer Entries</emp>. This will open another section where the <emp>“Index”</emp> of the layer can be entered. The <emp>"Index”</emp> of the layer references the ID of the map service. Take for example this layer (Location of mill facilities), the ID of this layer is <emp>0</emp> which corresponds to the <emp>Index</emp> (Figure 8).</p>
 <figure>
-  <img src="../assets/en/fgpauthor/fig5.png"/>
+  <img src="../assets/fr/fgpauthor/fig5.png"/>
   <figcaption>Figure 8: Example Map Service End Point – Location of mill facilities</figcaption>
 </figure>
 
@@ -522,12 +522,12 @@ The Authoring Tool’s interface (Figure 4) can be broken up into three areas:
 <p><emp>OGC WMS</emp></p>
 <p><strong><u>Step 5a.</u></strong> Click on the Add button under Layer Entries (Figure 9). This will open another section where the <emp>“ID”</emp> of the later entry in the WMS can be inputted (Figure 10). This is the value between the <emp><Name> …. </Name></emp> tag of the layer. Optionally, a descriptive name for the layer under the <emp>Name</emp> field can be entered. However, doing so will override the name coming from the service.</p>
 <figure>
-  <img src="../assets/en/fgpauthor/fig6.png"/>
+  <img src="../assets/fr/fgpauthor/fig6.png"/>
   <figcaption>Figure 9: Authoring Tool - Add Layer (OGC WMS)</figcaption>
 </figure>
 
 <figure>
-  <img src="../assets/en/fgpauthor/fig7.png"/>
+  <img src="../assets/fr/fgpauthor/fig7.png"/>
   <figcaption>Figure 10: Authoring Tool - Add Layer (OGC WMS) cont.</figcaption>
 </figure>
 
@@ -546,20 +546,20 @@ The Authoring Tool’s interface (Figure 4) can be broken up into three areas:
 <p>Navigate to the <emp>Plugins</emp> tab. This is found at the bottom of the Navigation (left) pane (Figure 11).</p>
 <p>The <emp>Plugins</emp> tab presents all the available plugins for time series data as well as other optional plugins. Each plugin has specific parameters which are required to be configured to successfully work with the data (see next section for the details).</p>
 <figure>
-  <img src="../assets/en/fgpauthor/fig8.png"/>
+  <img src="../assets/fr/fgpauthor/fig8.png"/>
   <figcaption>Figure 11: Authoring Tool - Enable plugins</figcaption>
 </figure>
 
 <h3 id="validation-and-integration">Validation and Integration</h3>
 <p>Final step: validate and preview to make sure everything works as it should (Figure 12).</p>
 <figure>
-  <img src="../assets/en/fgpauthor/fig9.png"/>
+  <img src="../assets/fr/fgpauthor/fig9.png"/>
   <figcaption>Figure 12: Authoring Tool - Summary pane</figcaption>
 </figure>
 
 <p>After completing the workflow and validation is successful, a .json configuration file can be generated and saved (Figure 13). This configuration file can be later uploaded back to the FGP Authoring tool if changes are required.</p>
 <figure>
-  <img src="../assets/en/fgpauthor/fig10.png"/>
+  <img src="../assets/fr/fgpauthor/fig10.png"/>
   <figcaption>Figure 13: Authoring Tool - Save and Upload</figcaption>
 </figure>
 
