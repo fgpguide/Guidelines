@@ -348,8 +348,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#definition-of-parameters" class="md-nav__link">
-    Definition of parameters
+  <a href="#definition-des-parametres" class="md-nav__link">
+    Définition des paramètres
   </a>
   
 </li>
@@ -685,128 +685,128 @@ Aller à la section <emp>Modules d’extension</emp> de l’outil de création p
   <figcaption>Figure 23 : Barre de défilement des plages de valeurs – Configurer l’étendue et les limites</figcaption>
 </figure>
 
-<p><strong>Extra Step. Step Type as “Static”</strong></p>
-<p>Some layer types require extra inputs to be completed before they will load. If the <emp>Step Type</emp> is set to <emp>“Static”</emp> there will be an extra option available to set the individual steps for the data (Figure 24). There is no limit to the number of individual values that can be used.</p>
+<p><strong>Étapes supplémentaires. Type d’étendue « Statique »</strong></p>
+<p>Certains types de couches nécessitent des entrées supplémentaires avant de pouvoir être chargés. Si le <emp>Type de limite</emp> est réglé à <emp>Statique</emp> une option supplémentaire sera disponible pour définir les limites distinctes pour l’affichage des données (Figure 24). Celles-ci correspondront aux différentes positions/dates qui apparaîtront sur la barre de défilement sur lesquelles s’arrêteront les poignées. Il n’y a pas de limite quant au nombre de valeurs distinctes que vous pouvez utiliser.</p>
 <figure>
   <img src="../../assets/fr/rangeslider/fig8.png"/>
-  <figcaption>Figure 24: Range Slider - Configure Static Limit</figcaption>
+  <figcaption>Figure 24 : Barre de défilement des plages de valeurs – Configurer les limites statiques</figcaption>
 </figure>
 
-<p><strong>Step 4. Select Layer</strong></p>
-<p>Under <emp>Layers</emp>, select the layer with which the plugin will work. The <emp>Layer Id</emp> is automatically generated when adding a map service to the Authoring tool. Each layer will have a unique Id generated. Ensure that the layer to be used is being selected. In the use case, these layers are Temperature and Salinity (Figure 25).</p>
+<p><strong>Étape 4. Sélectionner la couche</strong></p>
+<p>Sous <emp>Couches</emp>, sélectionner la couche avec laquelle le module d’extension fonctionnera. L’identifiant unique <emp>ID</emp> est automatiquement généré lors de l’ajout d’un service cartographique à l'outil de création. Un identifiant unique sera généré pour chaque couche. Vérifier que la couche qui sera utilisée est bien sélectionnée. Dans le cas d’utilisation, ces couches sont la température et la salinité (Figure 25).</p>
 <figure>
   <img src="../../assets/fr/rangeslider/fig9.png"/>
-  <figcaption>Figure 25: Range Slider - Configure Layers</figcaption>
+  <figcaption>Figure 25 : Barre de défilement des plages de valeurs – Configurer les couches</figcaption>
 </figure>
 
-<p>Populate the field <emp>name</emp> that the Range Slider will use to reference the data. In this use case example (Figure 25) the <emp>“COLLECTION_START_DATE”</emp> was used as mentioned earlier.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The exact field name must be used, not the Alias</p>
+<p>Entrer le <emp>Nom du champ</emp>qu’utilisera la barre de défilement des plages de valeurs. Dans cet exemple (Figure 25), <emp>COLLECTION_START_DATE</emp> a été utilisé comme mentionné précédemment.</p>
+<div class="admonition remarque">
+<p class="admonition-title">Remarque</p>
+<p>Le nom exact du champ doit être utilisé et non pas l’alias.</p>
 </div>
-<h3 id="definition-of-parameters">Definition of parameters</h3>
-<p>Listed in the following table are the definitions of all the parameters available when using the FGP Authoring Tool to configure the Range Slider.</p>
+<h3 id="definition-des-parametres">Définition des paramètres</h3>
+<p>Le tableau suivant présente les définitions de tous les paramètres disponibles lorsque l’outil de création pour la PGF est utilisé pour configurer la barre de défilement des plages de valeurs.</p>
 <table>
   <tr>
     <th></th>
-    <th>Parameters</th>
+    <th>Paramètres</th>
     <th>Description</th>
   </tr>
   <tr>
-    <th rowspan="3">General</th>
-    <td id=parameters>Open</td>
-    <td >Determines if the plugin will opfr/load automatically when a layer loads. By default, it is set to open on map load</td>
+    <th rowspan="3">Général</th>
+    <td id=parameters>Ouvert par défaut</td>
+    <td >Détermine si le module d’extension s’ouvre automatiquement lorsqu’une couche se charge. Par défaut, il est configuré pour s’ouvrir lors du chargement de la carte. En cas contraire, l’utilisateur devra aller l’activer dans le menu du visualiseur.</td>
   </tr>
     <tr>
-    <td id=parameters>Autorun</td>
-    <td>Allows the animation to start automatically when the map loads.</td>
+    <td id=parameters>Démarrer l’animation au chargement</td>
+    <td>Permet de démarrer automatiquement l’animation lorsque la carte est chargée.</td>
   </tr>
     <tr>
-    <td id=parameters>Loop</td>
-    <td>Allows the animation to restart automatically when it reaches the end of the array</td>
+    <td id=parameters>Jouer l’animation en boucle</td>
+    <td>Permet à l’animation de redémarrer automatiquement lorsqu’elle atteint la fin de la barre de défilement.</td>
   </tr>
   <tr>
-    <th rowspan="5">Slide Bar Controls</th>
-    <td id=parameters>Lock</td>
-    <td>Lock or unlock left anchor when step or play</td>
+    <th rowspan="5">Contrôles de la barre de défilement</th>
+    <td id=parameters>Barrer/débarrer la plage minimale</td>
+    <td>Ajoute un bouton permettant de verrouiller ou déverrouiller la poignée à gauche en mode manuel ou de lecture.</td>
   </tr>
   <tr>
-    <td id=parameters>Loop</td>
-    <td>Loop the animation</td>
+    <td id=parameters>Boucler l’animation</td>
+    <td>Ajoute un bouton qui permet de jouer en boucle l'animation.</td>
   </tr>
     <tr>
-    <td id=parameters>Delay</td>
-    <td>Add a dropdown menu to change the delay in play animation</td>
+    <td id=parameters>Délai entre les animations</td>
+    <td>Ajoute un menu déroulant pour modifier le délai de lecture de l’animation (entre 1 à 7 sec).</td>
   </tr>
     <tr>
-    <td id=parameters>Export</td>
-    <td>Ability to export the animation to a GIF</td>
+    <td id=parameters>Exporter l’animation en format GIF</td>
+    <td>Ajoute l’interrupteur qui offre la capacité d’exporter l’animation en format GIF.</td>
   </tr>
     <tr>
-    <td id=parameters>Refresh</td>
-    <td>Reset the slider with the default values</td>
+    <td id=parameters>Rafraîchir</td>
+    <td>Ajoute l’icône qui permet de réinitialiser la barre de défilement avec les valeurs par défaut présentent à l’ouverture de la carte.</td>
   </tr>
   <tr>
-    <th rowspan="9">Params</th>
-    <td id=parameters> Type</td>
-    <td>Determines the type of slider (date, wmst or number) to be used. If date or wmst is selected, range and limit must be in milliseconds.</td>
+    <th rowspan="9">Paramètres</th>
+    <td id=parameters>Type de plage de valeurs</td>
+    <td>Détermine le type de curseur (date, nombre ou WMS-T) à utiliser. Si date ou WMS-T est sélectionné, l’étendue et la limite doivent être en millisecondes.</td>
   </tr>
   <tr>
-    <td id=parameters>Range Type</td>
-    <td>Determines the type of range to be used. Single for one handle or Dual for two handles</td>
+    <td id=parameters>Type d’étendue</td>
+    <td>Détermine le nombre de poignées à utiliser. Simple pour une seule poignée ou double pour deux poignées.</td>
   </tr>
     <tr>
-    <td id=parameters>Step Type</td>
-    <td>The type of step (dynamic for open values or static from a list of values)</td>
+    <td id=parameters>Type de limite</td>
+    <td>Le type de positions de la barre de défilement (dynamique pour les valeurs ouvertes ou statique à partir d’une liste de valeurs définies par l’utilisateur).</td>
   </tr>
       <tr>
-    <td id=parameters>Units</td>
-    <td>Allows you to display a unit of measure to the range slider. Shown at the right of the axis</td>
+    <td id=parameters>Unités</td>
+    <td>Permet d’afficher une unité de mesure sur la barre de défilement des plages de valeurs. Indiqué à droite de l’axe du temps.</td>
   </tr>
       <tr>
     <td id=parameters>Description</td>
-    <td>Allows you to add a short description to the slider. Shown at the bottom of the toolbar</td>
+    <td>Permet d’ajouter une courte description supplémentaire sous l’axe du temps. Apparaît dans le bas à gauche de la barre de défilement.</td>
   </tr>
       <tr>
-    <td id=parameters>Precision</td>
-    <td>Allows you to set the precision of the data.
+    <td id=parameters>Précision</td>
+    <td>Permet de définir la précision des données.
         <ol type="i">
-          <li id=tablelist>Number - Set the precision for either 0,1,2 decimal places</li>
-          <li id=tablelist>Date or Wmst - Set the precision for either Date or Hour </li>
+          <li id=tablelist>Nombre : Définit la précision pour 0, 1 ou 2 décimales.</li>
+          <li id=tablelist>Date ou WMS-T : Définit si c’est une date ou une heure.</li>
         </ol>
     </td>
   </tr>
     <tr>
-    <td id=parameters>Animation Delay</td>
-    <td>Sets the delay between animations in milliseconds</td>
+    <td id=parameters>Délai de l’animation</td>
+    <td>Définit le délai entre les animations en secondes.</td>
   </tr>
     <tr>
-    <td id=parameters>Range</td>
-    <td>Determines the minimum and maximum range values to be used in the plugin
+    <td id=parameters>Valeurs par défaut de la plage</td>
+    <td>Détermine les valeurs de plage minimale et maximale à utiliser à l’ouverture du module d’extension.
         <ol type="i">
-          <li id=tablelist>Minimum - Set the minimum value for the range slider. If this is not set the minimum range will be determined from the field selected.</li>
-          <li id=tablelist>Maximum – Set the maximum value for the range slider. If this is not set the maximum range will be used</li>
+          <li id=tablelist>Plage min – Définit la position de la poignée de gauche sur la barre de défilement des plages de valeurs. Si ce paramètre n’est pas défini, la plage minimale correspondra à la limite minimale déterminée à partir du champ sélectionné.</li>
+          <li id=tablelist>•    Plage max – Définit la position de la poignée de droite de la barre de défilement des plages de valeurs. Si ce paramètre n’est pas défini, la limite maximale sera utilisée.</li>
         </ol>
     </td>
   </tr>
     <tr>
-    <td id=parameters>Limit</td>
-    <td>Determines the minimum and maximum limit values to be used in the plugin
+    <td id=parameters>Valeurs par défaut de la limite</td>
+    <td>Détermine les valeurs limites minimales et maximales à utiliser dans le module d’extension.
          <ol type="i">
-          <li id=tablelist>Minimum - Set the minimum value for the range slider. If this is not set the minimum range will be determined from the field selected.</li>
-          <li id=tablelist>Maximum – Set the maximum value for the range slider. If this is not set the maximum range will be used</li>
-           <li id=tablelist>Static Items – This allows you to set an array of values to use for inner limits. This is only enabled when Step Type is set to "Static"</li>
+          <li id=tablelist>•    Limite min – Définit la valeur minimale de la barre de défilement des plages de valeurs. Si ce paramètre n’est pas défini, la plage minimale sera déterminée à partir de la plus petite valeur du champ sélectionné.</li>
+          <li id=tablelist>•    Limite max – Définit la valeur maximale de la barre de défilement des plages de valeurs. Si ce paramètre n’est pas défini, la plage maximale des valeurs sera utilisée.</li>
+           <li id=tablelist>•   Valeurs limite statique – Permet de définir une série de valeurs à utiliser pour les positions/dates sur l’axe du temps. Cette fonction n’est activée que lorsque le type d’étendue est réglé sur « Statique ».</li>
         </ol>
     </td>
   </tr>
   <tr>
-    <th rowspan="2">Layers</th>
-    <td id=parameters>Id</td>
-    <td>Determines the layer id as defined in the layer section.</td>
+    <th rowspan="2">Couches</th>
+    <td id=parameters>ID</td>
+    <td>Détermine l’identifiant unique de la couche à utiliser. Il est généré automatiquement par l’outil de création.</td>
   </tr>
   <tr>
-    <td id=parameters>Field Name</td>
-    <td>Determines the field name of the field to be used to filter with the range slider. It is important to note that the field name has to be used and not the alias of the field.</td>
+    <td id=parameters>Nom du champ</td>
+    <td>Détermine le nom du champ à utiliser par la barre de défilement des plages de valeurs. Il est important de noter que le nom du champ doit être utilisé et non son alias.</td>
   </tr>
 </table>
 <p><br></p>
