@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#charting-tools" class="md-skip">
+        <a href="#outils-de-creation-de-graphiques" class="md-skip">
           Aller au contenu
         </a>
       
@@ -303,30 +303,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-the-charting-tool" class="md-nav__link">
-    What is the Charting Tool?
+  <a href="#quest-ce-que-loutil-de-creation-de-graphiques" class="md-nav__link">
+    Qu’est-ce que l’outil de création de graphiques ?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-to-use-it" class="md-nav__link">
-    When to use it?
+  <a href="#quand-lutiliser" class="md-nav__link">
+    Quand l'utiliser ?
   </a>
   
-    <nav class="md-nav" aria-label="When to use it?">
+    <nav class="md-nav" aria-label="Quand l'utiliser ?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#line-chart" class="md-nav__link">
-    Line Chart
+  <a href="#graphique-lineaire" class="md-nav__link">
+    Graphique linéaire
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#bar-chart" class="md-nav__link">
-    Bar Chart
+  <a href="#graphique-a-barres" class="md-nav__link">
+    Graphique à barres
   </a>
   
 </li>
@@ -337,26 +337,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-it-a-use-case" class="md-nav__link">
-    How to use it - A use case
+  <a href="#comment-lutiliser-un-cas-dutilisation" class="md-nav__link">
+    Comment l’utiliser – un cas d’utilisation
   </a>
   
-    <nav class="md-nav" aria-label="How to use it - A use case">
+    <nav class="md-nav" aria-label="Comment l’utiliser – un cas d’utilisation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#preparing-the-data" class="md-nav__link">
-    Preparing the Data
+  <a href="#preparation-des-donnees" class="md-nav__link">
+    Préparation des données
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-structure" class="md-nav__link">
-    Data Structure
+  <a href="#structure-des-donnees" class="md-nav__link">
+    Structure des données
   </a>
   
-    <nav class="md-nav" aria-label="Data Structure">
+    <nav class="md-nav" aria-label="Structure des données">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -391,8 +391,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-the-line-chart" class="md-nav__link">
-    Configuring the Line Chart
+  <a href="#configuration-du-graphique-lineaire" class="md-nav__link">
+    Configuration du graphique linéaire
   </a>
   
 </li>
@@ -530,167 +530,168 @@
                 <ul>
 <li class="i18n-link i18n-link-found i18n-link-en"><a href="../../plugins/charting/">English</a></li>
 </ul>
-<h1 id="charting-tools">Charting Tools</h1>
-<h2 id="what-is-the-charting-tool">What is the Charting Tool?</h2>
-<p>The Chart plugin provides a map-based charting tool that enables the visualization of one of the most common time series data in a spatial context, i.e. time series monitoring data available on specific sites such as weather stations, or in fixed regions such as watersheds. With the distribution of the sites or regions represented as a map service, the Charting Tool enables the creation of a Line Chart or Bar Chart for the time series data by sites/regions. This time series dataset may contain more than one variable, which can be charted accordingly by both the Line and Bar Chart.</p>
+<h1 id="outils-de-creation-de-graphiques">Outils de création de graphiques</h1>
+<h2 id="quest-ce-que-loutil-de-creation-de-graphiques">Qu’est-ce que l’outil de création de graphiques ?</h2>
+<p>Le module d'extension de création de graphiques crée des graphiques à partir d’une carte qui permet la visualisation des données de série chronologique les plus courantes dans un contexte spatial. Par exemple, les données de surveillance de sites particuliers comme les stations météorologiques, ou dans des régions fixes comme les bassins hydrographiques. La répartition des sites ou des régions étant représentée comme service cartographique, l’outil de création de graphiques permet la création d’un graphique linéaire ou d’un graphique à barres pour les données des séries chronologiques par site ou région. Votre ensemble de données de séries chronologiques peut contenir plusieurs variables qui peuvent être représentées à la fois par un graphique linéaire et un graphique à barres.</p>
 <figure>
   <img src="../../assets/fr/charts/fig1.png"/>
-  <figcaption>Figure 32: a) Line Chart showing the concentration of Fecal Coliforms per 100 ml samples over time for a shellfish site selected from the shellfish monitoring map; b) map showing shellfish monitoring sites.</figcaption>
+  <figcaption>Figure 32 : a) Graphique linéaire montrant la concentration de coliformes fécaux par 100 ml d’échantillons au fil du temps des eaux marines dans les zones de récolte de mollusques bivalves au Canada; b) carte montrant les sites de surveillance de zones de récolte de mollusques bivalves au Canada.</figcaption>
 </figure>
 
-<p>Figure 32 shows an example of map-based charts for time series visualization. The Line Chart shows data collected for one of the shellfish sites under monitoring across Canada. By clicking a monitoring site on the Shellfish Monitoring Map below, the user will see the Chart pop up.  The sliders for the X and Y Axis allow the user to filter results to show specific value ranges or time ranges respectively. More information on the data source can be found from the metadata.</p>
+<p>La Figure 32 montre un exemple de graphiques créés à partir d’une carte pour la visualisation de séries chronologiques. Le graphique linéaire présente les données recueillies pour l’une des zones de récoltes de mollusques bivalves au Canada. En cliquant sur un site de la carte ci-dessus, l’utilisateur verra apparaître la fenêtre contextuelle du graphique. Les curseurs des axes X et Y permettent à l’utilisateur de filtrer les résultats pour afficher des plages de valeurs ou de temps précis, respectivement. Les métadonnées offrent de plus amples renseignements sur la source des données.</p>
 <figure>
   <img src="../../assets/fr/charts/fig2.png"/>
-  <figcaption>Figure 33: a) Bar Chart showing the sample results in 2013, 2015 and 2016 for four parameters on one of the Independent Environmental Monitoring Stations in Canada by Canadian Nuclear Safety Commission; b) Map representing the distribution of the monitor stations.</figcaption>
+  <figcaption>Figure 33 : a) Graphique à barres montrant les résultats de l’échantillon en 2013, 2015 et 2016 pour quatre paramètres de l’une des stations indépendantes de surveillance environnementale au Canada par la Commission canadienne de sûreté nucléaire; b) Carte représentant la répartition des stations de surveillance.</figcaption>
 </figure>
 
-<p>An example of a Bar chart is provided in Figure 33 representing data collected from one of the Independent Environmental Monitoring Stations. The data verify that the public and environment around CNSC-regulated nuclear facilities are not adversely affected by releases to the environment. More information on the data source can be found from the metadata.</p>
-<p>In addition, the Charting plugin supports Pie Chart, which may be used to visualize non-time series data.</p>
-<h2 id="when-to-use-it">When to use it?</h2>
-<h3 id="line-chart">Line Chart</h3>
-<p>If you have a map service created to represent monitoring sites or fixed regions and if time series data is available over each site or region, the Line Chart is the preferred choice for visualizing the time series data for several reasons:</p>
+<p>Un exemple de graphique à barres est fourni à la Figure 33 pour représenter les données recueillies à l’une des stations indépendantes de surveillance environnementale. Les données permettent de vérifier que le public et l’environnement se trouvant à proximité des installations nucléaires réglementées par la CCSN ne subissent pas d’effets néfastes provenant des rejets dans l’environnement. Les métadonnées offrent de plus amples renseignements sur la source des données.</p>
+<p>Le module d'extension de création de graphiques prend également en charge les graphiques à secteurs (pointes de tarte), qui peuvent être utilisés pour visualiser des données de séries non temporelles.</p>
+<h2 id="quand-lutiliser">Quand l'utiliser ?</h2>
+<h3 id="graphique-lineaire">Graphique linéaire</h3>
+<p>Si un service cartographique est créé pour représenter des sites de surveillance ou des régions fixes et si des données de séries chronologiques sont disponibles pour chaque entité, le graphique linéaire est le choix privilégié pour visualiser les données de séries chronologiques pour plusieurs raisons :</p>
 <ul>
-<li>The advantage of showing trends of change, which is often of central interest for monitoring;</li>
-<li>The ability to show a long series of observations;</li>
-<li>The capacity to include a good number of lines each corresponding to a variable; and</li>
-<li>The capability to show the trend of a variable in comparison with that of other variables.</li>
+<li>L’avantage de montrer les tendances du changement, qui est souvent d’un intérêt central pour la surveillance;</li>
+<li>La capacité de présenter une longue série d’observations;</li>
+<li>La capacité d’inclure un bon nombre de lignes correspondant chacune à une variable; et</li>
+<li>La capacité d’afficher la tendance d’une variable par rapport à celle d’autres variables.</li>
 </ul>
 <figure>
   <img src="../../assets/fr/charts/fig3.png"/>
-  <figcaption>Figure 34: Line Chart showing concentration of Fecal Coliforms per 100 ml  on a monitoring site; underneath the Chart is the map showing shellfish monitoring sites across Canada</figcaption>
+  <figcaption>Figure 34 : Graphique linéaire montrant la concentration de coliformes fécaux par 100 ml sur un site de surveillance; sous le graphique se trouve la carte montrant les zones de récolte de mollusques bivalves au Canada.</figcaption>
 </figure>
 
-<p>In this example Figure 34, the Line Chart was used to visualize the time series data from data collected from Shellfish Sites. The data is dynamically represented in a rendered line chart where the user can use the onscreen slider to dynamically manipulate the data. The Line Chart supports a slider to filter results by the date or by the results.</p>
-<h3 id="bar-chart">Bar Chart</h3>
-<p>The Bar Chart is preferred to Line Chart when the site/region-based time series data has sparse observations, for example, three observations or even less. A Bar Chart in this case can be used with each observation represented by a bar, and successive bars to show the changes over time.</p>
+<p>Dans cet exemple de la Figure 34, le graphique linéaire a été utilisé pour visualiser les données des séries chronologiques à partir des données recueillies sur les zones de récoltes de mollusques. Les données sont représentées dynamiquement dans un graphique linéaire où l’utilisateur peut utiliser les poignées présentent sur les deux axes pour manipuler dynamiquement les données. Le graphique linéaire prend en charge une barre de défilement pour filtrer les résultats en fonction de la date ou des résultats.</p>
+<h3 id="graphique-a-barres">Graphique à barres</h3>
+<p>Le graphique à barres est préférable au graphique linéaire lorsque les données des séries chronologiques basées sur un site ou une région présentent peu d’observations. Par exemple, trois observations ou moins. Un graphique à barres dans ce cas peut être utilisé en ayant chaque observation représentée par une barre, et des barres successives pour montrer les changements dans le temps.</p>
 <figure>
   <img src="../../assets/fr/charts/fig4.png"/>
-  <figcaption>Figure 35: Bar Chart for a monitoring station, popped up when the user clicks on a monitoring station of the Independent Environmental Monitoring Stations map (underneath the Bar Chart).</figcaption>
+  <figcaption>Figure 35 : Graphique à barres pour une station de surveillance. Le graphique s’affiche lorsque l’utilisateur clique sur une station de surveillance de la carte des stations de surveillance environnementales indépendantes (sous le graphique à barres).</figcaption>
 </figure>
 
-<p>In this use case (Figure 35), the map-based bar chart tool was used to visualize the Independent Environmental Monitoring Station time series data. The collected parameters was used along the x-axis while the y-axis represents the collected sample results. The year of data collection was used as the variables (i.e. 2013, 2015, 2016). Bar Chart was preferred to Line Chart for visualization of this dataset due to the limited timestamps available.  More information on this dataset can be found in the metadata.</p>
-<h2 id="how-to-use-it-a-use-case">How to use it - A use case</h2>
-<p>Using the Shellfish Monitoring data for a use case, we illustrate how to use the Charting plugin to create map-based Line Charts. This dataset provides marine bacteriological water quality observations for bivalve shellfish harvest areas in Canada (British Columbia, New Brunswick, Newfoundland, Nova Scotia, Prince Edward Island and Quebec).</p>
-<h3 id="preparing-the-data">Preparing the Data</h3>
-<p><strong>Linked Tables</strong></p>
-<p>Linked Tables refers to using two or more tables that share the same field. This data structure establishes a relationship between the datasets through which a single table containing all the parameters and values is related to the reference data. In the use case example, Shellfish Water Classification Program, the data structure of this dataset reveals that relationship tables are used. The layer <emp>“Marine Water Quality Data”</emp> is linked to the <emp>“Samples_Echantillons_National”</emp> table by the “Site” field (Figure 36). Starting from the layer, the Charting plugin is automatically directed to access this related table and pulls the required time series data to generate the appropriate chart.</p>
+<p>Dans ce cas d’utilisation (Figure 35), l’outil de graphique à barres créé à partir d’une carte a été utilisé pour visualiser les données des séries chronologiques de la station indépendante de surveillance environnementale. Les paramètres recueillis ont été utilisés le long de l’axe des X, tandis que l’axe des Y représente les résultats de l’échantillon prélevé. Les années de la collecte des données ont été utilisées comme variables (c.‑à‑d. 2013, 2015, 2016). On a préféré le graphique à barres au graphique linéaire pour la visualisation de cet ensemble de données en raison du nombre limité d’années de lectures. Les métadonnées offrent de plus amples renseignements sur cet ensemble de données.</p>
+<h2 id="comment-lutiliser-un-cas-dutilisation">Comment l’utiliser – un cas d’utilisation</h2>
+<p>En utilisant les données de surveillance des zones de récoltes de mollusques pour un cas d’utilisation, nous illustrons comment utiliser le module d'extension de création de graphiques pour créer des graphiques linéaires à partir d’une carte. Cet ensemble de données fournit des observations de la qualité bactériologique des eaux marines pour les zones de récolte de mollusques bivalves au Canada (Colombie-Britannique, Nouveau-Brunswick, Terre-Neuve, Nouvelle-Écosse, Île-du-Prince-Édouard et Québec).</p>
+<h3 id="preparation-des-donnees">Préparation des données</h3>
+<p><strong>Tables liées</strong></p>
+<p>Les tables liées font référence à l’utilisation de deux tables ou plus qui partagent le même champ. Cette structure de données établit une relation entre les ensembles de données au moyen de laquelle une seule table contenant tous les paramètres et toutes les valeurs est lié aux données de référence. Dans l’exemple de cas d’utilisation, le Programme de classification des eaux coquillières, la structure des données révèle que des tables en relations sont utilisées. La couche <emp>Données de la qualité des eaux marines</emp> est liée à la table <emp>Samples_Echantillons_National</emp> par le champ « Site » (Figure 36). À partir de la couche, le module d’extension de création de graphiques est automatiquement dirigé vers l’accès à cette table liée et extrait les données de série chronologique requises pour générer le graphique approprié.</p>
 <figure>
   <img src="../../assets/fr/charts/fig5.png"/>
-  <figcaption>Figure 36: Shellfish Water Classification Program map service endpoint showing layers, linked tables and relationship tables data structure</figcaption>
+  <figcaption>Figure 36 : Service cartographique du Programme de classification des eaux coquillières montrant les couches, les tables liées et la structure des données des tables en relation.</figcaption>
 </figure>
 
-<h3 id="data-structure">Data Structure</h3>
-<p>Data structure here refers to the organization of the data file for use by the Chart plugin. It takes into consideration linked tables and efficient access and modifications of data.  The Charting plugin supports three options of data structure.  </p>
+<h3 id="structure-des-donnees">Structure des données</h3>
+<p>La structure de données ici fait référence à l’organisation du fichier de données à utiliser par le module d’extension de création de graphiques. Elle tient compte des tables liées, et de l’efficacité de l’accès et des modifications aux données. Le module d’extension de création de graphiques prend en charge trois options de structure de données.  </p>
 <h4 id="option-1">Option 1</h4>
-<p>Following the same structure as the use case example (Figure 36), the data can be organized using linked tables. The map service has the layer <emp>“Marine Water Quality Data”</emp> is linked to the <emp>“Samples_Echantillons_National”</emp> table by the <emp>“Site”</emp> field (Figure 37). It can be seen that the <emp>“Site”</emp> name serves as the unique identifier linking the layer and the table, and the bracketed numbers in Figure 37 (b) refer to the number of observations on each monitoring site. The <emp>“Date”</emp> field contains the date of the observations and the <emp>“FC_MPN_CF_NPP_100_mL”</emp> field has the recorded values.</p>
+<p>En suivant la même structure du cas d’utilisation (Figure 36), les données peuvent être organisées à l’aide de tables liées. Le service cartographique contient la couche <emp>Données de la qualité des eaux marines</emp> qui est liée à la table <emp>Samples_Echantillons_National</emp> par le champ « Site » (Figure 37). On peut voir que le nom du <emp>Site</emp> sert d’identificateur unique reliant la couche et la table, et les chiffres entre parenthèses à la Figure 37 (b) font référence au nombre d'observations sur chaque site de surveillance. Le champ <emp>Date</emp> contient la date des observations et le champ <emp>FC_MPN_CF_NPP_100_mL</emp> contient les valeurs enregistrées.</p>
 <figure>
   <img src="../../assets/fr/charts/fig6.png"/>
-  <figcaption>Figure 37: Data structure for Option 1 – a) Layer table with references to linked table highlighted, b) Linked table with reference to layer table and time series data highlighted</figcaption>
+  <figcaption>Figure 37 : Structure des données pour l’option 1 – a) Table attributaire de la couche avec références à la table liée mises en évidence, b) Table liée avec référence à la table attributaire de la couche et aux données de séries chronologiques mises en évidence.</figcaption>
 </figure>
 
 <h4 id="option-2">Option 2</h4>
-<p>Where a large number of parameters are observed on a site, you may use Option 2 to organize your data for use by the Charting plugin. Similar to option 1, the data is mapped as a layer and linked to a table that holds the records of time series observations (Figure 38 (a)). The difference from the previous use case is that there is a large number of parameters being observed, as shown in Tested substances of Figure 38 (b). In this case, the time series data can be organized in a manner to avoid making the linked table too wide.  </p>
-<p>As shown in Figure 38 (b), there is now one field that lists all the parameters <emp>[“VARIABLE_NAME”]</emp>, a field that lists the corresponding data value <emp>[VALUE_VALEUR]</emp>, a field that lists the corresponding dates <emp>[DATE]</emp> and likewise the units of the values <emp>[UNIT_UNITE]</emp>.  The table starts with listing all the parameters with dates and monitoring sites repeating, then all the dates of observations with monitoring sites repeating, and finally all the monitoring sites.</p>
+<p>Lorsqu’un grand nombre de paramètres sont observés sur un site, vous pouvez utiliser l’option 2 pour organiser vos données afin qu’elles soient utilisées par le module d’extension de création de graphiques. Comme pour l’option 1, les données sont cartographiées en couche et liées à une table qui contient les enregistrements des observations des séries chronologiques (Figure 38 (a)). La différence par rapport au cas d’utilisation précédent est qu’un grand nombre de paramètres sont observés, comme le montrent les substances testées de la Figure 38 (b). Dans ce cas, les données des séries chronologiques peuvent être organisées de manière à éviter de rendre la table liée trop large. </p>
+<p>Comme indiqué à la Figure 38 (b), il existe désormais un champ qui répertorie tous les paramètres analysés <emp>VARIABLE_NAME</emp>, un champ qui répertorie les valeurs analysées correspondante <emp>VALUE_VALEUR</emp>,un champ qui répertorie les dates correspondantes <emp>DATE</emp> ainsi que les unités des valeurs <emp>UNIT_UNITE</emp>.  The table starts with listing all the parameters with dates and monitoring sites repeating, then all the dates of observations with monitoring sites repeating, and finally all the monitoring sites.</p>
 <figure>
   <img src="../../assets/fr/charts/fig7.png"/>
-  <figcaption>Figure 38: Data Structure Option 2 – a) Layer table with references to linked table highlighted, b) Linked table with reference to layer table and time series data highlighted</figcaption>
+  <figcaption>Figure 38 : Structure des données pour l’option 2 – a) Table de couches avec références aux tables liée mises en évidence, b) Table liée avec référence à la table attributaire de la couche et aux données de séries chronologiques mises en évidence.</figcaption>
 </figure>
 
 <h4 id="option-3">Option 3</h4>
-<p>Organizing the time series data where fields are created by concatenating the data into one field as inline text. This structure requires that the data be formatted in a specific way. Each field to be charted is required to have the data listed and separated using parenthesis and commas. (Figure 39). If your data is not already in this format, this data structure will require a detailed workflow to get the data in this format. </p>
-<p>This method is not recommended because it requires a structured workflow to concatenate the data in a new field to meet the requirements. Each parameter observed would require a new field to be created. However, if there are constraints in the data which require and suits this data structure it is available to be used for charting.</p>
+<p>Il s’agit d’une organisation des données des séries chronologiques où les champs sont créés en concaténant les données dans un champ sous forme de texte inséré. Cette structure exige que les données soient formatées d’une façon particulière. Les données de chaque champ à représenter doivent être répertoriées et séparées à l’aide de parenthèses et de virgules. (Figure 39). Si vos données ne sont pas déjà dans ce format, cette structure de données nécessitera un flux de travail détaillé pour obtenir le format requis. </p>
+<p>Cette méthode n’est pas recommandée, car elle nécessite un flux de travail laborieux pour concaténer les données dans un nouveau champ afin de répondre aux exigences. Chaque paramètre observé nécessiterait la création d’un nouveau champ. Toutefois, s’il y a des contraintes dans les données qui exigent et conviennent à cette structure de données, elle peut être utilisée pour représenter les données en graphique.</p>
 <figure>
   <img src="../../assets/fr/charts/fig8.png"/>
-  <figcaption>Figure 39: Data structure for Option 3</figcaption>
+  <figcaption>Figure 39 : Structure de données pour l’option 3</figcaption>
 </figure>
 
-<h2 id="configuring-the-line-chart">Configuring the Line Chart</h2>
-<p>Before you begin, Ensure that all Layers to be used should be configured in Authoring tool under the <emp>Map Tab</emp>. <a href="/">(See Section: Using the Authoring Tool to Configure a Plugin – Adding a new layer)</a></p>
-<p><strong><u>Step 1. Enable Charting plugin.</u></strong></p>
-<p>Navigate to the <emp>Plugins</emp> section in the FGP Authoring Tool.
-Under the <emp>Charts tab</emp>, click on <emp>Enable</emp>.</p>
+<h2 id="configuration-du-graphique-lineaire">Configuration du graphique linéaire</h2>
+<p>Avant de commencer, il faut vous assurer que toutes les couches à utiliser sont configurées dans l’outil de création dans le menu <emp>Carte</emp>. <a href="/authortool.fr/#ajouter-une-nouvelle-couche">(Voir la section : Utilisation de l’outil de création pour configurer un module d’extension – Ajout d’une nouvelle couche)</a></p>
+<p><strong><u>Étape 1. Activer le module d’extension de création de graphiques</u></strong></p>
+<p>Aller à la section <emp>Modules d’extension</emp> de l’outil de création pour la PGF.
+Sous l’onglet <emp>Graphiques</emp>, cliquer sur <emp>Activer</emp>.</p>
 <figure>
   <img src="../../assets/fr/charts/fig9.png"/>
-  <figcaption>Figure 40: Line Chart - Enable</figcaption>
+  <figcaption>Figure 40 : Graphique linéaire – Activer</figcaption>
 </figure>
 
-<p><strong><u>Step 2. Define Axis Labels</u></strong></p>
+<p>Sélectionner « Linéaire » comme type de graphique et inscrire un titre correspondant pour le graphique (Figure 40). Puisque dans ce cas d’utilisation, un graphique linéaire est utilisé pour visualiser les données.</p>
+<p><strong><u>Étape 2. Définir les étiquettes d’axe</u></strong></p>
 <ol>
 <li>
-<p>Choose the <emp>“Type”</emp> and set the Title for the X-Axis.
-Under the <emp>“Type”</emp>, choose the option that best suits the intended use case.</p>
+<p>i.   Choisir le <emp>Type</emp> aet définir le titre de l'<emp>Axe des X</emp>.
+Sous <emp>Type</emp>, choisir l’option qui convient le mieux au cas d’utilisation prévue.</p>
 <ol>
 <li>
-<p><emp>Date</emp> – If set, the expected format of the date data would be in the form of Year-Month-Day or follow a similar convention. (e.g., YYYY-MM-DD; DD-MM-YYYY)</p>
+<p><emp>Date</emp> – Si l’option est activée, les données sur la date devraient être présentées sous la forme Année-Mois-Jour ou suivre une convention similaire. (ex. : AAAA-MM-JJ; JJ-MM-AAAA)</p>
 </li>
 <li>
-<p><emp>Linear</emp> – If set, the expected format of the date data would be linear (e.g., YYYY)</p>
+<p><emp>Linéaire</emp> – Si l’option est activée, le format attendu des données sur la date serait linéaire (p. ex., AAAA)</p>
 </li>
 </ol>
 </li>
 </ol>
-<p>In the use case example, the <emp>“Type”</emp> is set to Date (Figure 41).</p>
+<p>Dans le cas d’utilisation, le <emp>Type</emp> est défini à <emp>Date</emp> (Figure 41).</p>
 <ol>
-<li>Set the <emp>“Type”</emp> and Title for the Y-Axis
-Under the <emp>“Type”</emp> the only option available is Linear (Figure 41).</li>
+<li>Définir <emp>Type</emp> aet le titre de l'<emp>Axe des X</emp>
+Sous <emp>Type</emp> la seule option disponible est <emp>Linéaire</emp> (Figure 41).</li>
 </ol>
 <figure>
   <img src="../../assets/fr/charts/fig10.png"/>
-  <figcaption>Figure 41: Line Chart - Axis Labels</figcaption>
+  <figcaption>Figure 41 : Graphique linéaire – Étiquettes d’axes</figcaption>
 </figure>
 
-<p><strong>&lt;&gt;Step 3. Select Layer</u></strong></p>
+<p><strong><u>Étape 3. Sélectionner la couche</u></strong></p>
 <ol>
 <li>
-<p><emp>Layer ID</emp> - Under the <emp>Layer Id</emp>, select the layer with which the plugin will work. The <emp>layer Id</emp> is automatically generated when adding a map service to the Authoring Tool. Each layer will have a unique Id generated. Ensure that the layer to be used is being selected. In the use case, this layer is <emp>“Shellfish Sites”</emp> (Figure 42).</p>
+<p><emp>Identifiant de la couche</emp> - Sous <emp>Identifiant de la couche</emp>, sélectionner la couche avec laquelle le module d’extension fonctionnera. L’<emp>Identifiant de la couche</emp> est automatiquement généré lors de l’ajout d’un service cartographique à l'outil de création. Un identifiant unique sera généré pour chaque couche. Vérifier que la couche qui sera utilisée est bien sélectionnée. Dans le cas d’utilisation, cette couche est <emp>Zones de récoltes des mollusque</emp> (Figure 42).</p>
 </li>
 <li>
-<p><emp>Name Field</emp> – Choose a corresponding field to be used to identify with the generated Charting visualization. In the use case, the <emp>“Site”</emp> field was used to identify what site data is being displayed.</p>
+<p><emp>Champ nommé</emp> – Choisir un champ à utiliser pour la visualisation des graphiques générée. Dans le cas d’utilisation, le champ <emp>Site</emp> a été utilisé pour identifier les données du site affichées.</p>
 </li>
 <li>
-<p><emp>Chart Data Type</emp> – Choose the best option that relates to the data structure used for the dataset. In the use case, Link was used because the data structure uses Linked Tables.</p>
+<p><emp>Type de données du graphique</emp> – Choisir l’option qui correspond à la structure des données utilisée pour l’ensemble de données. Dans le cas d’utilisation, Lié a été utilisé parce que la structure de données utilise des tables liées.</p>
 </li>
 <li>
-<p><emp>Link URL</emp> – If the link is set as the <emp>Chart Data Type</emp>, provide the URL link of the linked table. This can be found on the map service page. In the use case, the URL link for the Linked table was provided.</p>
+<p><emp>URL table de liens</emp> – Si <emp>Lié</emp> est défini comme <emp>Type de données du graphique</emp>, indiquer l’hyperlien de la table liée. Ce renseignement figure dans les détails de la page du service cartographique. Dans le cas d’utilisation, l’hyperlien de la table liée a été fourni.</p>
 </li>
 <li>
-<p><emp>Link Field</emp> – If Link is set as the <emp>Chart Data Type</emp>, provide the common field used for the relationship between the tables. In the use case, the <emp>“Site”</emp> field was the relationship field</p>
+<p><emp>Champ lié</emp> – Si <emp>Lié</emp> est défini comme le <emp>Type de données du graphique</emp>, indiquer le champ utilisé comme relation entre les tables. Dans le cas d’utilisation, le champ <emp>Site</emp> est le champ de relation.</p>
 </li>
 </ol>
 <figure>
   <img src="../../assets/fr/charts/fig11.png"/>
-  <figcaption>Figure 42: Line Chart – Layers</figcaption>
+  <figcaption>Figure 42 : Graphique linéaire – Couches</figcaption>
 </figure>
 
-<p><strong><u>Step 4. Configure Data Parameters (Figure 43)</u></strong></p>
+<p><strong><u>Étape 4. Configuration des paramètres de données (Figure 43)</u></strong></p>
 <ol>
 <li>
-<p><emp>Type of Link</emp> – Choose the type that reflects how the data is structured.</p>
+<p><emp>Type de lien</emp> – Choisir le type qui reflète la façon dont les données sont structurées.</p>
 <ol>
-<li><emp>Single</emp> – Choose this If the data structure of your data follows Option 1 (see Preparing data), i.e.  the names of parameters being observed are shown only at the top of the linked table. This is the case for the Shellfish use case.  See Preparing the data - Option 1 for more details. </li>
-<li><emp>Multi</emp> – Select this If Option 2 applies to your data, i.e., there is one field of the linked table having parameter names as the values. one field with the date and one field with the results. See Preparing the data – Option 2.</li>
+<li><emp>Unique</emp> – Choisir cette option si la structure de vos données respecte l’option 1 (voir Préparation des données), c’est-à-dire que les noms des paramètres observés sont affichés uniquement en haut de la table liée. C’est le cas pour le cas d’utilisation des zones de récoltes de mollusques. Voir Préparation des données – Option 1 pour plus de détails.  </li>
+<li><emp>Multiple</emp> – Sélectionner cette option si l’option 2 s’applique à vos données, c.-à-d. qu’il y a un champ de la table liée dont les valeurs sont des noms de paramètres. Un champ avec la date et un champ avec les résultats. Voir Préparation des données – Option 2.</li>
 </ol>
 </li>
 <li>
-<p><emp>Link Field</emp> – Provide the name of the field that links the layer and the linked table</p>
+<p><emp>Champ Lien</emp> – Indiquer le nom du champ qui relie la couche et la table liée.</p>
 </li>
 <li>
-<p><emp>Date Field</emp> – Provide the field name that corresponds to the <emp>“Date”</emp> field of the linked table. In the use case, this field name was <emp>“Date”</emp>.</p>
+<p><emp>Champ Date</emp> – Indiquer le nom du champ qui correspond au champ « Date » de la table liée. Dans le cas d’utilisation, le nom de ce champ est <emp>Date</emp>.</p>
 </li>
 <li>
-<p><emp>Label Values</emp> – If the <emp>“Type of Link”</emp> was set to multi, provide the field name that corresponds to the units of measure. Otherwise, this remains empty. In the use case, this was left empty because the <emp>“Type of Link”</emp> was set to <emp>“Single”</emp></p>
+<p><emp>Valeurs des étiquettes</emp> – Si le <emp>Type de lien</emp> a été défini à <emp>Multiple</emp> indiquer le nom du champ qui correspond aux unités de mesure. Sinon, laisser vide. Dans le cas d’utilisation, ce champ a été laissé vide parce que le <emp>Type de lien</emp> a été réglé à <emp>Unique</emp>.</p>
 </li>
 <li>
-<p><emp>Measure Field</emp> – Provide the field name that corresponds to the data to be displayed by the Chart. In the use case, the field name used was <emp>”FC_MPN_CF_NPP_100_mL”</emp>. Note that the exact field name must be used. </p>
+<p><emp>Champ de mesure</emp> – Indiquer le nom du champ qui correspond aux données à afficher dans le graphique. Dans le cas d’utilisation, le nom de champ utilisé était <emp>FC_MPN_CF_NPP_100_mL</emp>. Veuillez noter qu’il faut utiliser le nom exact du champ et non son alias.</p>
 </li>
 <li>
-<p><emp>Prefix</emp> – If required, provide a prefix to be displayed when the user hovers over the data. In this use case, when the user hovers the mouse over the chart data, <emp>“Concentration”</emp> will be used as the prefix before displaying the value.</p>
+<p><emp>Préfixe</emp> – Si nécessaire, fournir un préfixe à afficher lorsque l’utilisateur survole les données. Dans ce cas d’utilisation, lorsque l’utilisateur place la souris sur les données du graphique, le préfixe « Concentration » sera utilisé devant la valeur.<emp>Concentration</emp> sera utilisé devant la valeur.</p>
 </li>
 <li>
-<p><emp>Suffix</emp> - If required, provide a suffix to be displayed when the user hovers over the data. In this use case, when the user hovers the mouse over the chart data, <emp>“by 100 / ml”</emp> will be used as the suffix after displaying the value.</p>
+<p><emp>Suffixe</emp> - Si nécessaire, fournir un suffixe à afficher lorsque l’utilisateur survole les données. Dans ce cas d’utilisation, lorsque l’utilisateur place la souris sur les données du graphique, <emp>by 100 / ml</emp> sera utilisé comme suffixe après l’affichage de la valeur.</p>
 </li>
 </ol>
-<p><strong>Optional</strong>, if more data Fields are required to be displayed, click on the <emp>Add</emp> button (Figure 43) to add a new data parameter and repeat the steps to configure.</p>
+<p><strong>En option</strong>, si d’autres champs de données doivent être affichés, cliquer sur le bouton Ajouter en bas à droite (Figure 43), pour ajouter un nouveau paramètre de données et répéter les étapes de configuration.</p>
 <figure>
   <img src="../../assets/fr/charts/fig12.png"/>
   <figcaption>Figure 43: Line Chart – Data</figcaption>

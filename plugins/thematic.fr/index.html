@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#thematic-slider" class="md-skip">
+        <a href="#la-barre-de-defilement-des-valeurs-thematiques" class="md-skip">
           Aller au contenu
         </a>
       
@@ -291,16 +291,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-the-thematic-slider" class="md-nav__link">
-    What is the Thematic Slider?
+  <a href="#quest-ce-que-la-barre-de-defilement-des-valeurs-thematiques" class="md-nav__link">
+    Qu’est-ce que la barre de défilement des valeurs thématiques ?
   </a>
   
-    <nav class="md-nav" aria-label="What is the Thematic Slider?">
+    <nav class="md-nav" aria-label="Qu’est-ce que la barre de défilement des valeurs thématiques ?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#advantages-of-the-thematic-slider" class="md-nav__link">
-    Advantages of the Thematic Slider
+  <a href="#avantages-de-la-barre-de-defilement-des-valeurs-thematiques" class="md-nav__link">
+    Avantages de la barre de défilement des valeurs thématiques
   </a>
   
 </li>
@@ -311,37 +311,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-to-use-it" class="md-nav__link">
-    When to use it?
+  <a href="#quand-lutiliser" class="md-nav__link">
+    Quand l'utiliser ?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-it-a-use-case" class="md-nav__link">
-    How to use it – A use case
+  <a href="#comment-lutiliser-un-cas-dutilisation" class="md-nav__link">
+    Comment l'utiliser – Un cas d'utilisation
   </a>
   
-    <nav class="md-nav" aria-label="How to use it – A use case">
+    <nav class="md-nav" aria-label="Comment l'utiliser – Un cas d'utilisation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#preparing-the-data" class="md-nav__link">
-    Preparing the data
+  <a href="#preparation-des-donnees" class="md-nav__link">
+    Préparation des données
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuring-the-thematic-slider" class="md-nav__link">
-    Configuring the Thematic Slider
+  <a href="#configuration-de-la-barre-de-defilement-des-valeurs-thematiques" class="md-nav__link">
+    Configuration de la barre de défilement des valeurs thématiques
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#definition-of-parameters" class="md-nav__link">
-    Definition of parameters
+  <a href="#definition-des-parametres" class="md-nav__link">
+    Définition des paramètres
   </a>
   
 </li>
@@ -489,145 +489,141 @@
                 <ul>
 <li class="i18n-link i18n-link-found i18n-link-en"><a href="../../plugins/thematic/">English</a></li>
 </ul>
-<h1 id="thematic-slider">Thematic Slider</h1>
-<h2 id="what-is-the-thematic-slider">What is the Thematic Slider?</h2>
-<p>The Thematic Slider plugin enables you to create a time series animation using time series maps that are either prepared as multiple map services or as multiple layers within a map service. These maps represent a single theme with each map corresponding to a successive time stamp.   The resulting animation allows the end-users to quickly visualize changes of the theme of interest over time and across space.  </p>
-<h3 id="advantages-of-the-thematic-slider">Advantages of the Thematic Slider</h3>
+<h1 id="la-barre-de-defilement-des-valeurs-thematiques">La barre de défilement des valeurs thématiques</h1>
+<h2 id="quest-ce-que-la-barre-de-defilement-des-valeurs-thematiques">Qu’est-ce que la barre de défilement des valeurs thématiques ?</h2>
+<p>Le module d’extension de la barre de défilement des valeurs thématiques vous permet de créer une animation de série chronologique à l’aide de cartes de séries chronologiques qui sont préparées comme services cartographique multiples ou comme couches multiples dans un service cartographique. Ces cartes représentent un thème unique et chaque carte correspond à une période spécifique. L’animation obtenue permet aux utilisateurs de visualiser rapidement les changements du thème d’intérêt dans le temps et dans l’espace.</p>
+<h3 id="avantages-de-la-barre-de-defilement-des-valeurs-thematiques">Avantages de la barre de défilement des valeurs thématiques</h3>
 <ul>
-<li>The ability to list all the layers to be displayed in order one after the other.</li>
-<li>The convenience to automatically cycle through / animate the layers when the map is loaded.</li>
-<li>If there is an extra context that can further explain/enhance the user experience or provide more information about the layer, the plugin allows for it to be placed.</li>
+<li>Possibilité d’établir la liste de toutes les couches à afficher l’une après l’autre.</li>
+<li>La commodité de parcourir/d’animer automatiquement les couches lorsque la carte est chargée.</li>
+<li>S’il y a un contexte supplémentaire qui peut expliquer davantage ou améliorer l’expérience de l’utilisateur ou fournir plus d’information sur la couche, le module d’extension permet d’ajouter cette information complémentaire.</li>
 </ul>
-<h2 id="when-to-use-it">When to use it?</h2>
-<p>The Thematic Slider plugin is best used in cases where multiple layers represent the states of successive timestamps.  It provides the user with the ability to visualize the change occurring over each time as it cycles through each map. If contextual information is available for each layer, the Thematic Slider is a good choice as it allows you to place the text underneath the legend, which can be retrieved as you navigate through each layer.  </p>
-<p>For the map service of Fire Season Length, for example, Figure 27 shows three map layers representing Short Term (2011-2040), Medium Term (2041-2070) and Long Term (2071-2100) under the climate change scenario of RCP 8.5. Using the Thematic Slider (Figure 26), these layers can be easily configured for time animation as well as for individual layer navigation via the play bar found at the bottom of the legend panel. Any textual information can be placed in the space below the legend.</p>
+<h2 id="quand-lutiliser">Quand l'utiliser ?</h2>
+<p>L’utilisation du module d’extension de la barre de défilement des valeurs thématiques est préférable dans les cas où plusieurs couches représentent une période temporelle successive. Il permet à l’utilisateur de visualiser le changement qui se produit en parcourant chaque carte. Si des renseignements contextuels sont disponibles pour chaque couche, la barre de défilement des valeurs thématiques est un bon choix, car il vous permet de placer le texte sous la légende, qui peut être consulter à mesure que vous naviguez dans chaque couche.  </p>
+<p>Pour le service cartographique de la durée de la saison des feux de forêt, par exemple, la Figure 27 montre trois couches cartographiques représentant les prévisions du court terme (2011-2040), du moyen terme (2041-2070) et du long terme (2071-2100) selon le scénario de changement climatique de RCP 8.5. À l’aide de la barre de défilement des valeurs thématiques (Figure 26), ces couches peuvent être facilement configurées pour l’animation ainsi que pour la navigation manuelle par le biais des commandes d’animation situées à gauche, au bas du panneau de légende. Toute information textuelle ajoutée sera placée dans l’espace sous la légende.</p>
 <figure>
    <iframe id="iframe1" allowfullscreen=true importance = high data-src="https://jolevesq.github.io/contributed-plugins/thematic-slider/samples/thematic-slider-index.html?sample=9"></iframe>
-  <figcaption>Figure 26: Map Showing Fire Season Length under RCP 8.5 across Canada</figcaption>
+  <figcaption>Figure 26 : Carte montrant la durée de la saison des feux de forêt selon le RCP 8.5 au Canada</figcaption>
 </figure>
 
 <figure>
   <img src="../../assets/fr/thematicslider/fig1.png"/>
-  <figcaption>Figure 27: Layers from Fire Season Map Service</figcaption>
+  <figcaption>Figure 27 : Couches du service cartographique de la durée de la saison des feux de forêt</figcaption>
 </figure>
 
-<h2 id="how-to-use-it-a-use-case">How to use it – A use case</h2>
-<p>Using the xSO4D Wet Deposition maps 1981-2015 as a use case, below we demonstrate how to configure the Thematic Slider (Figure 28).</p>
+<h2 id="comment-lutiliser-un-cas-dutilisation">Comment l'utiliser – Un cas d'utilisation</h2>
+<p>À l’aide des cartes des dépôts humides xSO4D (1981 à 2015) comme cas d’utilisation, nous démontrons ci-dessous comment configurer la barre de défilement des valeurs thématiques (Figure 28).</p>
 <figure>
    <iframe id="iframe1" allowfullscreen=true importance = high data-src="https://jolevesq.github.io/contributed-plugins/thematic-slider/samples/thematic-slider-index.html?sample=8"></iframe>
-  <figcaption>Figure 28: Map Showing xSO4D Wet Disposition Maps (1981-2015)</figcaption>
+  <figcaption>Figure 28 : Carte montrant les cartes des dépôts humides xSO4D (1981-2016)</figcaption>
 </figure>
 
 <figure>
   <img src="../../assets/fr/thematicslider/fig2.png"/>
-  <figcaption>Figure 29: Layers listed for xSO4D Map Service</figcaption>
+  <figcaption>Figure 29 : Couches répertoriées pour le service cartographique xSO4D</figcaption>
 </figure>
 
-<h3 id="preparing-the-data">Preparing the data</h3>
-<p>To get started we need to ensure that the data is prepared in a format that will work well with the Thematic Slider plugin. In particular, you may ask:</p>
+<h3 id="preparation-des-donnees">Préparation des données</h3>
+<p>Pour commencer, nous devons nous assurer que les données sont préparées dans un format qui fonctionnera bien avec le module d’extension de la barre de défilement des valeurs thématiques. En particulier, vous pouvez vous demander ceci :</p>
 <ul>
 <li>
-<p>Are the multiple layers present in the map service each representing an individual time stamp? In our use case, the answer is yes as shown in Figure 29.</p>
+<p>Les multiples couches présentes dans le service cartographique représentent-elles chacune une période distincte ?  Dans notre cas d’utilisation, la réponse est oui comme indiqué à la Figure 27.</p>
 </li>
 <li>
-<p>Is it appropriate to use all the layers in the map service to configure the animation through the Thematic Slider? In principle, more layers tend to enhance the effect of animation; the time required to load the layers, however, is a constraint, which needs to be taken into consideration when preparing your data. In our current case, 36 layers could cause slow data upload. You may use all of them for testing, and opt to select layers periodiodically, e.g. every 5 or 10 years for including in animation.  </p>
+<p>Est-il approprié d’utiliser toutes les couches du service cartographique pour configurer l’animation au moyen de la barre de défilement des valeurs thématiques ? En principe, un plus grand nombre de couches tend à améliorer l’effet de l’animation; toutefois, le temps nécessaire pour charger les couches est une contrainte dont il faut tenir compte lorsque vous préparez vos données. Dans notre cas actuel, 36 couches pourraient ralentir le téléchargement des données. Vous pouvez toutes les utiliser pour les essais et choisir de sélectionner des couches de façon périodique, p. ex., tous les 5 ou 10 ans pour les inclure dans l’animation.</p>
 </li>
 <li>
-<p>Is the thematic layer served by this map service properly represented with respect to the color scheme, symbology, legend and projection? In the current case, the xSo4D maps show appropriate designs for all the cartographic elements.</p>
+<p>La couche thématique desservie par ce service cartographique est-elle correctement représentée par rapport à la palette de couleurs, aux symboles, à la légende et à la projection ?  Dans le cas présent, les cartes xSo4D montrent des modèles appropriés pour tous les éléments cartographiques.</p>
 </li>
 </ul>
-<p>Tip:
-It is recommended to use the thematic slider with no more than 15 layers at a time. Testing has shown that a maximum of 15 layers meets the optimal loading time (3-5s) as recommended by the FGP Data team.</p>
-<h3 id="configuring-the-thematic-slider">Configuring the Thematic Slider</h3>
-<p>Before you begin, Ensure that all Layers to be used should be configured in Authoring tool under the <emp>Map Tab</emp>. <a href="/authortool/#adding-a-new-layer">(See Section: Using the Authoring Tool to Configure a Plugin – Adding a new layer)</a></p>
-<p><strong><u>Step 1. Enable Thematic Slider</u></strong></p>
-<p>Navigate to the <emp>Plugins</emp> section in the FGP Authoring Tool.</p>
-<p>Under the <emp>Thematic Slider tab</emp>, click on <emp>Enable</emp>.</p>
+<p>Astuce :
+Il est recommandé d’utiliser la barre de défilement des valeurs thématiques avec tout au plus 15 couches à la fois. Les essais ont démontré qu’un maximum de 15 couches respecte le temps de chargement optimal (3 à 5 sec) recommandé par l’équipe des données de la PGF.</p>
+<h3 id="configuration-de-la-barre-de-defilement-des-valeurs-thematiques">Configuration de la barre de défilement des valeurs thématiques</h3>
+<p>Avant de commencer, il faut vous assurer que toutes les couches à utiliser sont configurées dans l’outil de création sous le menu  <emp>Carte</emp>. <a href="/authortool.fr/#ajouter-une-nouvelle-couche">(Voir la section : Utilisation de l’outil de création pour configurer un module d’extension – Ajout d’une nouvelle couche)</a></p>
+<p><strong><u>Étape 1. Activer la barre de défilement des valeurs thématiques</u></strong></p>
+<p>Aller à la section <emp>Modules d’extension</emp> de l’outil de création pour la PGF.</p>
+<p>Sous l’onglet <emp>Barre de défilement des valeurs thématiques</emp>, cliquer sur <emp>Activer</emp>.</p>
 <figure>
   <img src="../../assets/fr/thematicslider/fig3.png"/>
-  <figcaption>Figure 30: Thematic Slider - Configure Parameters</figcaption>
+  <figcaption>Figure 30 : Barre de défilement des valeurs thématiques – Configurer les paramètres</figcaption>
 </figure>
 
-<p><strong><u>Step 2. Select Options</u></strong></p>
-<p>Select from the following options to enable them depending on the intended use case (Figure 30).</p>
+<p><strong><u>Étape 2. Sélectionner les options</u></strong></p>
+<p>Faire un choix parmi les options suivantes pour les activer en fonction de l’utilisation prévue (Figure 30).</p>
 <ol>
-<li>Start animation on load</li>
-<li>Play the animation on loop</li>
-<li>Stack layer visibility</li>
+<li>Démarrer l’animation au chargement</li>
+<li>Jouer l’animation en boucle</li>
+<li>Empiler la visibilité des couches</li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>By default, the following will be enabled:</p>
+<div class="admonition remarque">
+<p class="admonition-title">Remarque</p>
+<p>Les éléments suivants sont activés par défaut :</p>
 <ol>
-<li>Open by default</li>
-<li>Enable description control</li>
-<li>Enable Slider control</li>
+<li>Ouvert par défaut</li>
+<li>Activer la barre de défilement</li>
+<li>Empiler les éléments de la légende</li>
 </ol>
 </div>
-<p><strong><u>Step 3. Select Layers</u></strong></p>
-<p>Under <emp>Layers</emp>, select the layer on which the plugin will be enabled on. Set the <emp>Animation duration</emp>, <emp>Title for layer animation</emp>, and <emp>Description for layer animation</emp> (Figure 31).</p>
+<p><strong><u>Étape 3. Sélectionner les couches</u></strong></p>
+<p>Sous <emp>Couches</emp>, sélectionner la couche pour laquelle le module d’extension sera activé. Définir <emp>Durée de l’animation en millisecondes</emp>, le <emp>Titre de l’animation de cette couche</emp> et la <emp>Description de l’animation de cette couche</emp> (Figure 31).</p>
 <figure>
   <img src="../../assets/fr/thematicslider/fig4.png"/>
-  <figcaption>Figure 31: Thematic Slider - Configure Layers</figcaption>
+  <figcaption>Figure 31 : Barre de défilement des valeurs thématiques – Configurer la couche</figcaption>
 </figure>
 
-<p>At this point, you can add as many layers as required. In the use case example, a layer was selected every 5 years.</p>
-<p><strong><u>Step 4. Add custom legend</u></strong></p>
-<p>Optional, click on the <emp>Add</emp> Button to a custom legend for that layer (Figure 31).</p>
-<h3 id="definition-of-parameters">Definition of parameters</h3>
-<p>Listed in the following table are the definitions of all the parameters available when using the FGP Authoring tool to configure the Thematic Slider to work with an applicable map service.</p>
+<p>À ce stade, vous pouvez ajouter autant de couches que nécessaire. Dans l’exemple de cas d’utilisation, une couche a été sélectionnée tous les 5 ans.</p>
+<p><strong><u>Étape 4. Ajouter une légende personnalisée</u></strong></p>
+<p>En option, cliquer sur le bouton <emp>Ajouter</emp> pour ajouter une légende personnalisée pour cette couche (Figure 31).</p>
+<h3 id="definition-des-parametres">Définition des paramètres</h3>
+<p>Le tableau suivant présente les définitions de tous les paramètres disponibles lorsque l’outil de création pour la PGF est utilisé pour configurer la barre de défilement des valeurs thématiques afin qu’il fonctionne avec un service cartographique compatible.</p>
 <table>
   <tr>
     <th></th>
-    <th>Parameters</th>
+    <th>Paramètres</th>
     <th>Description</th>
   </tr>
  <tr>
-    <th rowspan="6">General</th>
-    <td id=parameters>Open</td>
-    <td>This plugin can be set to open automatically when a map loads. By default it is set open on map load</td>
+    <th rowspan="6">Général</th>
+    <td id=parameters>Ouvert par défaut</td>
+    <td>Détermine si le module d’extension s’ouvre automatiquement lorsqu’une couche se charge. Par défaut, il est configuré pour s’ouvrir lors du chargement de la carte. En cas contraire, l’utilisateur devra aller l’activer dans le menu du visualiseur.</td>
   </tr>
   <tr>
-    <td id=parameters>Auto run</td>
-    <td>Determines if the plugin will start the animation automatically</td>
+    <td id=parameters>Démarrer l’animation au chargement</td>
+    <td>Détermine si le module d’extension démarrera automatiquement l’animation.</td>
   </tr>
     <tr>
-    <td id=parameters> Loop</td>
-    <td>Determines if the plugin will restart the animation automatically when it reaches the end of the array</td>
+    <td id=parameters>Jouer l’animation en boucle</td>
+    <td>Permet à l’animation de redémarrer automatiquement lorsqu’elle atteint la fin de la barre de défilement.</td>
   </tr>
     <tr>
-    <td id=parameters>Description</td>
-    <td>Determines if the description control is available</td>
+    <td id=parameters>Activer la barre de défilement</td>
+    <td>Détermine si les commandes d’animation sont disponibles.</td>
   </tr>
     <tr>
-    <td id=parameters>Slider</td>
-    <td>Determines if the slider controls are available. Note: Description needs to be true for the slider to be enabled</td>
+    <td id=parameters>Empiler la visibilité des couches</td>
+    <td>Détermine si seule la couche active est affichée ou si la visibilité de toutes les couches est superposée. Les couches sont superposées de la couche 0 à la couche active.</td>
   </tr>
     <tr>
-    <td id=parameters>Stack</td>
-    <td>Determines if only the active layer is shown or if the visibility of all the layers is stacked. Layers are stacked from -Layer 0 to the active layer</td>
+    <td id=parameters>Empiler les éléments de la légende</td>
+    <td>Combine progressivement les légendes des couches présentent dans le modules d’extension.</td>
   </tr>
   <tr>
-    <th rowspan="5">Layers</th>
-    <td id=parameters>Id</td>
-    <td>Determines the layer id as defined in the layer section.</td>
+    <th rowspan="5">Couches</th>
+    <td id=parameters>ID</td>
+    <td>Détermine l’identifiant unique de la couche à utiliser. Il est généré automatiquement par l’outil de création.</td>
   </tr>
   <tr>
-    <td id=parameters>Field</td>
-    <td>layer id as define in the layer section</td>
+    <td id=parameters>Durée de l’animation en millisecondes</td>
+    <td>Durée en millisecondes de la présence de la couche active.</td>
   </tr>
     <tr>
-    <td id=parameters>Duration</td>
-    <td>duration in milliseconds to stay on the active layer</td>
+    <td id=parameters>Titre de l’animation de cette couche</td>
+    <td>Titre à afficher dans le haut du panneau des couches.</td>
   </tr>
     <tr>
-    <td id=parameters>Title</td>
-    <td>Title to show in description control</td>
-  </tr>
-    <tr>
-    <td id=parameters>Description</td>
-    <td>Text to show inside description control</td>
-  </tr>
+    <td id=parameters>Description de l’animation de cette couche</td>
+    <td>Correspond aux informations supplémentaires qui apparaîtront sous la légende.</td>
+  </tr>    
 </table>
                 
               
