@@ -398,8 +398,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#definition-of-parameters" class="md-nav__link">
-    Definition of parameters
+  <a href="#definition-des-parametres" class="md-nav__link">
+    Définition des paramètres
   </a>
   
 </li>
@@ -694,95 +694,95 @@ Sous <emp>Type</emp> la seule option disponible est <emp>Linéaire</emp> (Figure
 <p><strong>En option</strong>, si d’autres champs de données doivent être affichés, cliquer sur le bouton Ajouter en bas à droite (Figure 43), pour ajouter un nouveau paramètre de données et répéter les étapes de configuration.</p>
 <figure>
   <img src="../../assets/fr/charts/fig12.png"/>
-  <figcaption>Figure 43: Line Chart – Data</figcaption>
+  <figcaption>Figure 43 : Graphique linéaire – Données</figcaption>
 </figure>
 
-<p><strong><u>Step 5. Details Option</u></strong></p>
-<p>Optionally (Figure 44), under the <emp>“Details”</emp> parameter, the details panel can be customized. Using the markdown notation, it is possible to provide customized additional information in the details panel. An example can be found here</p>
+<p><strong><u>Étape 5. Détails des options</u></strong></p>
+<p>En option (Figure 44), sous <emp>Détails</emp> le panneau de détails peut être personnalisé. À l’aide de la notation « Markdown », il est possible de fournir des informations supplémentaires personnalisées dans le panneau de détails. Vous en trouverez un exemple ici :</p>
 <figure>
   <img src="../../assets/fr/charts/fig13.png"/>
-  <figcaption>Figure 44: Line Chart - Custom Details Parameter</figcaption>
+  <figcaption>Figure 44 : Graphique linéaire – Paramètre Détails personnalisés</figcaption>
 </figure>
 
-<h2 id="definition-of-parameters">Definition of parameters</h2>
-<p>Listed in the following table are the definitions of all the parameters available when using the FGP Authoring Tool to configure the Charting plugin.</p>
+<h2 id="definition-des-parametres">Définition des paramètres</h2>
+<p>Le tableau suivant présente les définitions de tous les paramètres disponibles lorsque l’outil de création de la PGF est utilisé pour configurer le module d’extension de création de graphiques.</p>
 <table>
   <tr>
     <th></th>
-    <th>Parameters</th>
+    <th>Paramètres</th>
     <th>Description</th>
   </tr>
  <tr>
-    <th rowspan="2">General</th>
+    <th rowspan="2">Général</th>
     <td id=parameters>Type</td>
-    <td>Determines the type of chart to be created. This includes a pie chart, bar chart or line chart</td>
+    <td>Détermine le type de graphique à créer. Cela comprend les graphiques à secteurs, les graphiques à barres ou les graphiques linéaires.</td>
   </tr>
   <tr>
-    <td id=parameters>Title</td>
-    <td>Determines the chart title to be displayed</td>
+    <td id=parameters>Titre</td>
+    <td>Détermine le titre du graphique à afficher.</td>
   </tr>
    <tr>
     <th rowspan="1">Options</th>
-    <td id=parameters>Datasets Colors</td>
-    <td>An option to include hexadecimal color values to use to display the chart</td>
+    <td id=parameters>Couleurs des jeux de données</td>
+    <td>Option d’inclure des valeurs de couleur hexadécimale à utiliser pour afficher le graphique.</td>
   </tr>
    <tr>
-    <th rowspan="2">Label Axis</th>
+    <th rowspan="2">Étiquettes des axes</th>
     <td id=parameters>Type</td>
-    <td>Determines the type of label to be used. The label names can be retrieved from a field from the layer (Linear or Date for line chart) or configuration. (Linear or Date) for the line chart.</td>
+    <td>Détermine le type d’étiquette qui sera utilisé. Les noms des étiquettes peuvent être récupérés dans un champ de la couche (linéaire ou date pour graphique linéaire) ou de la configuration.</td>
   </tr>
   <tr>
-    <td id=parameters>Title</td>
-    <td>Determines the title name to be used for the different axis</td>
+    <td id=parameters>Titre</td>
+    <td>Détermine le titre à utiliser pour les différents axes.</td>
   </tr>
   <tr>
-    <th rowspan="6">Layers</th>
-    <td id=parameters>Id</td>
-    <td>Determines the layer id as defined in the layer section.</td>
+    <th rowspan="6">Couches</th>
+    <td id=parameters>Identifiant de la couche</td>
+    <td>Détermine l’identifiant unique de la couche comme définie dans l’onglet Couches.</td>
   </tr>
   <tr>
-    <td id=parameters>Name Field</td>
-    <td>Determines the field used to identify the data being displayed by the chart.</td>
+    <td id=parameters>Champ nommé</td>
+    <td>Détermine le champ utilisé pour identifier les données affichées dans le graphique.</td>
   </tr>
     <tr>
-    <td id=parameters>Chart Data Type</td>
-    <td>Determines the type of data to be expected by the Charting plugin (Inline, Link).
+    <td id=parameters>Type de données du graphique</td>
+    <td>Détermine le type de données attendues par le module d’extension e création de graphiques (inséré ou lien).
     <ol type="i">
-     <li id=tablelist>Inline – Data structure using Inline Text. See Preparing data for more information</li>
-     <li id=tablelist>Link – Data is structured using Linked Tables. See Preparing data for more information</li>
+     <li id=tablelist>Interne – Structure de données utilisant du texte inséré. Se reporter au chapitre « Préparation des données » pour de plus amples renseignements.</li>
+     <li id=tablelist>Lié – Les données sont structurées à l’aide des tables liées. Se reporter au chapitre « Préparation des données » pour de plus amples renseignements.</li>
     </ol>
 </td>
   </tr>
     <tr>
-    <td id=parameters>Link URL</td>
-    <td>Determines the URL for the linked Table. This is only required if the “Chart Data Type” is set to “Link”</td>
+    <td id=parameters>URL table liée</td>
+    <td>Détermine l’URL de la table liée. Cela n’est nécessaire que si le « type de données du graphique » est défini à « Lien ».</td>
   </tr>
     <tr>
-    <td id=parameters>Link Field</td>
-    <td>Determines the field name that links the layer to the data table. This is only required if the “Chart Data Type” is set to “Link”</td>
+    <td id=parameters>Champ lié</td>
+    <td>Détermine le nom de champ qui relie la couche à la table de données. Cela n’est nécessaire que si le « type de données du graphique » est défini à « Lien ».</td>
   </tr>
       <tr>
-    <td id=parameters>Data</td>
-    <td>Determines the different parameters for the layer to use to create the chart
+    <td id=parameters>Données</td>
+    <td>Détermine les différents paramètres de la couche à utiliser pour créer le graphique.
      <ol type="i">
-          <li id=tablelist>Type of Link – Determines the type of data structure to expect. This is based on how the data is structured inside the link table
+          <li id=tablelist>Type de lien – Détermine le type de structure de données auquel il faut s’attendre. Cela dépend de la façon dont les données sont structurées à l’intérieur de la table liée.
           <ol type="a">
-                    <li id=tablelist>Single – For option 1. See Preparing your data for more information
-                    <li id=tablelist>Multi – For option 2. See Preparing your data for more information
+                    <li id=tablelist>Unique – pour l’option 1 se reporter à « Préparation des données » pour de plus amples renseignements.
+                    <li id=tablelist>Multiple – pour l’option 2 se reporter à « Préparation des données » pour de plus amples renseignements.
           </ol>
           </li>
-          <li id=tablelist>Link Field – Determines the field used to link the relationship between layer and table.</li>
-          <li id=tablelist>Date Field – Determines the field used for time series dates.</li>
-          <li id=tablelist>Label Values – Determines the field corresponding to the unit labels for the parameters if available..</li>
-          <li id=tablelist>Measure Field – Determines the field corresponding to the time series collected results to create the chart. Note the field name must be used and not the field alias.</li>
-          <li id=tablelist>Prefix – Determines the prefix to be added to the data hover</li>
-          <li id=tablelist>Suffix – Determines the suffix to be added to the data hover</li>
+          <li id=tablelist>Champ Lié – Détermine le champ utilisé pour lier la relation entre la couche et la table</li>
+          <li id=tablelist>Champ date – Détermine le champ utilisé pour les dates des séries chronologiques.</li>
+          <li id=tablelist>Valeurs étiquettes – Détermine le champ correspondant aux étiquettes des unités pour les paramètres, si disponible.</li>
+          <li id=tablelist>Champ de mesure – Détermine le champ correspondant aux résultats de la série chronologique collectée pour créer le graphique. Notez que le nom du champ doit être utilisé et non son alias.</li>
+          <li id=tablelist>Préfixe – Détermine le préfixe à ajouter lors du survol des données.</li>
+          <li id=tablelist>vii. Suffixe – Détermine le suffixe à ajouter lors du survol des données.</li>
         </ol>
   </tr>
      <tr>
     <th rowspan="1"></th>
-    <td id=parameters>Details</td>
-    <td>Specifies if the details panel should be customized. Custom details can be included using the markdown notation.</td>
+    <td id=parameters>Détails</td>
+    <td>Indique si le panneau de détails doit être personnalisé. Les détails personnalisés peuvent être inclus à l’aide de la notation « Markdown ».</td>
   </tr>
 </table>
                 
