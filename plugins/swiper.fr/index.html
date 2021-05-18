@@ -338,8 +338,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-the-swiper-plugin" class="md-nav__link">
-    Configuring the Swiper plugin
+  <a href="#configuration-du-module-dextension-de-loutil-de-balayage" class="md-nav__link">
+    Configuration du module d’extension de l’outil de balayage
   </a>
   
 </li>
@@ -350,8 +350,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#definition-of-parameters" class="md-nav__link">
-    Definition of Parameters
+  <a href="#definition-des-parametres" class="md-nav__link">
+    Définition des paramètres
   </a>
   
 </li>
@@ -499,43 +499,43 @@
   <figcaption>Figure 46 : Carte montrant les centrales hydroélectriques et alimentées au pétrole</figcaption>
 </figure>
 
-<h4 id="configuring-the-swiper-plugin">Configuring the Swiper plugin</h4>
-<p>Before you begin, Ensure that all Layers to be used should be configured in Authoring tool under the <emp>Map Tab</emp>. <a href="/authortool/#adding-a-new-layer">(See Section: Using the Authoring Tool to Configure a Plugin – Adding a new layer)</a></p>
-<p><strong><u>Step 1. Enable Swiper</u></strong></p>
-<p>Navigate to the <emp>Plugins</emp> section in the FGP Authoring Tool.</p>
-<p>Under the <emp>Swiper tab</emp>, click on <emp>Enable</emp>.</p>
-<p>By default. The <emp>“Type”</emp> will be set vertical. At the present time, this is the only option available. The <emp>“keyboard movement”</emp> is set to 10 by default. This is the recommended value; however, you may change it according to your use case.</p>
+<h4 id="configuration-du-module-dextension-de-loutil-de-balayage">Configuration du module d’extension de l’outil de balayage</h4>
+<p>Avant de commencer, il faut vous assurer que toutes les couches à utiliser sont configurées dans l’outil de création dans le menu <emp>Carte</emp>. <a href="/Guidelines/authortool.fr/#ajouter-une-nouvelle-couche">CVoir la section : Utilisation de l’outil de création pour configurer un module d’extension – Ajouter une nouvelle couche)</a></p>
+<p><strong><u>Étape 1. Activer l’outil de balayage</u></strong></p>
+<p>Aller à la section <emp>Modules d'extension</emp> de l’outil de création pour la PGF.</p>
+<p>Sous l'onglet <emp>Outil de balayage</emp>, cliquer sur <emp>Activer</emp>.</p>
+<p>Par défaut, le <emp>Type</emp> sera défini à vertical. À l’heure actuelle, c’est la seule option disponible. Le <emp>Déplacement clavier</emp> est défini à 10 par défaut. Il s’agit de la valeur recommandée, mais vous pouvez la modifier en fonction de votre cas d’utilisation.</p>
 <figure>
   <img src="../../assets/fr/swiper/fig1.png"/>
-  <figcaption>Figure 47: Swiper plugin – Enable</figcaption>
+  <figcaption>Figure 47 : Module d’extension de l’outil de balayage – Activation</figcaption>
 </figure>
 
-<p><strong><u>Step 2. Add Layers</u></strong></p>
-<p>Under the <emp>Layer Id</emp> (Figure 47), ensure that the layer to be used with the Swiper plugin is selected. In this use case, the <emp>Layer Id</emp> is automatically generated after adding layers in the Authoring Tool. Selecting the <emp>“2015 Land Cover”</emp> Layer will result in the Swiper being enabled on that layer.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The layer selected here will be the layer the Swiper plugin is enabled on.</p>
+<p><strong><u>Étape 2. Ajouter des couches</u></strong></p>
+<p>Sous <emp>Identifiant de la couche</emp> Figure 47), s’assurer que la couche à utiliser avec le module d’extension de l’outil de balayage est sélectionnée. L’<emp>Identifiant de la couche</emp> est généré automatiquement après l’ajout d’une couche dans l'outil de création. La sélection de la couche <emp>Couverture terrestre 2015</emp> permettra d’activer l’outil de balayage sur cette couche.</p>
+<div class="admonition remarque">
+<p class="admonition-title">Remarque</p>
+<p>La couche sélectionnée ici sera la couche pour laquelle le module d’extension de l’outil de balayage est activé. Donc, ce sera cette couche qui apparaîtra/disparaîtra au passage de l’outil de balayage</p>
 </div>
-<h3 id="definition-of-parameters">Definition of Parameters</h3>
-<p>Listed in the following table are the definitions of all the parameters available when using the FGP Authoring tool to configure the plugin to work with an applicable map service.</p>
+<h3 id="definition-des-parametres">Définition des paramètres</h3>
+<p>Le tableau suivant présente les définitions de tous les paramètres disponibles lorsque l’outil de création pour la PGF est utilisé pour configurer le module d’extension afin qu’il fonctionne avec un service cartographique applicable.</p>
 <table>
   <tr>
     <th></th>
-    <th>Parameters</th>
+    <th>Paramètres</th>
     <th>Description</th>
   </tr>
  <tr>
-    <th rowspan="2">General</th>
+    <th rowspan="2">Général</th>
     <td id=parameters>Type</td>
-    <td>Determines oi the swiper is vertical or horizontal. Note: Only vertical is supported at the moment</td>
+    <td>Détermine si l’outil de balayage se déplace verticalement ou horizontalement. Remarque : Seul le déplacement vertical est supporté pour le moment.</td>
   <tr>
-    <td id=parameters>Keyboard Offset</td>
-    <td>Determines the number of pixels to move the swiper when the keyboard is used for navigation</td>
+    <td id=parameters>Déplacement  clavier</td>
+    <td>Détermine le nombre de pixels pour déplacer l’outil de balayage lorsque les flèches du clavier sont utilisées.</td>
   </tr>
   <tr>
-    <th rowspan="1">Layers</th>
-    <td id=parameters>Id</td>
-    <td>Layer id as defined in the layer section</td>
+    <th rowspan="1">Couches</th>
+    <td id=parameters>Identifiant de la couche</td>
+    <td>Détermine l’identifiant unique de la couche à utiliser. Il est généré automatiquement par l’outil de création.</td>
   </tr>
 </table>
                 
